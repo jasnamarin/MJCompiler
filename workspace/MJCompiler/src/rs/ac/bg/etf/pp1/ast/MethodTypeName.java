@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 17/11/2017 14:22:55
+// 16/0/2023 8:16:6
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -11,29 +11,29 @@ public class MethodTypeName implements SyntaxNode {
     private int line;
     public rs.etf.pp1.symboltable.concepts.Obj obj = null;
 
-    private Type Type;
-    private String methName;
+    private ReturnType ReturnType;
+    private String methodName;
 
-    public MethodTypeName (Type Type, String methName) {
-        this.Type=Type;
-        if(Type!=null) Type.setParent(this);
-        this.methName=methName;
+    public MethodTypeName (ReturnType ReturnType, String methodName) {
+        this.ReturnType=ReturnType;
+        if(ReturnType!=null) ReturnType.setParent(this);
+        this.methodName=methodName;
     }
 
-    public Type getType() {
-        return Type;
+    public ReturnType getReturnType() {
+        return ReturnType;
     }
 
-    public void setType(Type Type) {
-        this.Type=Type;
+    public void setReturnType(ReturnType ReturnType) {
+        this.ReturnType=ReturnType;
     }
 
-    public String getMethName() {
-        return methName;
+    public String getMethodName() {
+        return methodName;
     }
 
-    public void setMethName(String methName) {
-        this.methName=methName;
+    public void setMethodName(String methodName) {
+        this.methodName=methodName;
     }
 
     public SyntaxNode getParent() {
@@ -57,16 +57,16 @@ public class MethodTypeName implements SyntaxNode {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Type!=null) Type.accept(visitor);
+        if(ReturnType!=null) ReturnType.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Type!=null) Type.traverseTopDown(visitor);
+        if(ReturnType!=null) ReturnType.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Type!=null) Type.traverseBottomUp(visitor);
+        if(ReturnType!=null) ReturnType.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -75,13 +75,13 @@ public class MethodTypeName implements SyntaxNode {
         buffer.append(tab);
         buffer.append("MethodTypeName(\n");
 
-        if(Type!=null)
-            buffer.append(Type.toString("  "+tab));
+        if(ReturnType!=null)
+            buffer.append(ReturnType.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+methName);
+        buffer.append(" "+tab+methodName);
         buffer.append("\n");
 
         buffer.append(tab);

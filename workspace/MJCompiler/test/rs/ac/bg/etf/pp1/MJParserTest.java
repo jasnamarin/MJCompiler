@@ -12,6 +12,8 @@ import java_cup.runtime.Symbol;
 import rs.ac.bg.etf.pp1.ast.SyntaxNode;
 import rs.ac.bg.etf.pp1.util.Log4JUtils;
 import rs.etf.pp1.mj.runtime.Code;
+import rs.etf.pp1.mj.runtime.Run;
+import rs.etf.pp1.mj.runtime.disasm;
 import rs.etf.pp1.symboltable.Tab;
 
 public class MJParserTest {
@@ -43,25 +45,36 @@ public class MJParserTest {
 	        SyntaxNode prog = (SyntaxNode)(s.value);
 	        
 			Tab.init(); // Universe scope
-			SemanticPass semanticCheck = new SemanticPass();
+			SemanticAnalyzer semanticCheck = new SemanticAnalyzer();
 			prog.traverseBottomUp(semanticCheck);
-			
-	        log.info("Print calls = " + semanticCheck.printCallCount);
-	        Tab.dump();
+			log.info(" Deklarisanih globalnih promenljivih ima " + semanticCheck.globalVarCount());
+			log.info(" Deklarisanih lokalnih promenljivih ima " + semanticCheck.localVarCount());
+			log.info(" Poziva globalnih funkcija ima " + semanticCheck.globalFunctionCallCount());
+			log.info(" Deklarisanih simbolickih konstanti ima " + semanticCheck.symbolicConstCount());
+			log.info(" Koriscenje formalnog parametra funkcije detektovano " + semanticCheck.formParamUsageCount() + " puta");
+
+			Tab.dump();
 	        
 	        if (!p.errorDetected && semanticCheck.passed()) {
-	        	File objFile = new File(args[1]);
+//	        	File objFile = new File(args[1]);
+				String objFilePath = args[0].replace(".mj",".obj");
+				File objFile = new File(objFilePath);
+
 	        	log.info("Generating bytecode file: " + objFile.getAbsolutePath());
 	        	if (objFile.exists())
 	        		objFile.delete();
 	        	
 	        	// Code generation...
 	        	CodeGenerator codeGenerator = new CodeGenerator();
+
+				Code.dataSize = semanticCheck.nVars();
 	        	prog.traverseBottomUp(codeGenerator);
-	        	Code.dataSize = semanticCheck.nVars;
 	        	Code.mainPc = codeGenerator.getMainPc();
 	        	Code.write(new FileOutputStream(objFile));
 	        	log.info("Parsiranje uspesno zavrseno!");
+
+				disasm.main(new String[]{objFilePath});
+				Run.main(new String[]{objFilePath/*,"-debug"*/});
 	        }
 	        else {
 	        	log.error("Parsiranje NIJE uspesno zavrseno!");

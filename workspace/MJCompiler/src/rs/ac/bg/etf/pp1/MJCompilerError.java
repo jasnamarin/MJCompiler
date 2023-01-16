@@ -41,7 +41,7 @@ public class MJCompilerError {
 
     @Override
     public String toString() {
-        return String.format("[Linija #%-2d]  %s: %s", line, type, msg);
+        return String.format("[Line #%-2d]  %s: %s", line, type, msg);
     }
 
 }

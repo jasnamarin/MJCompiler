@@ -1,162 +1,403 @@
 package rs.ac.bg.etf.pp1;
 
+import java.util.*;
 import java_cup.runtime.*;
 import org.apache.log4j.*;
-
-// import java.io.*;
 import rs.ac.bg.etf.pp1.ast.*;
+import rs.ac.bg.etf.pp1.MJCompilerError.CompilerErrorType;
 
+//--------------------------------------parser-code------------------------------------------------
 
 parser code {:
-	
+
 	boolean errorDetected = false;
-	
+
 	Logger log = Logger.getLogger(getClass());
-   
-   
-    // slede redefinisani metodi za prijavu gresaka radi izmene teksta poruke
-     
+
+    public List<MJCompilerError> syntaxErrors = new ArrayList<>();
+
+   	public List<MJCompilerError> getSyntaxErrors() {
+    	return syntaxErrors;
+    }
+
+//-------------------------redefined-methods-for-error-reporting-----------------------------------
+
     public void report_fatal_error(String message, Object info) throws java.lang.Exception {
       done_parsing();
       report_error(message, info);
     }
-  
+
     public void syntax_error(Symbol cur_token) {
-        report_error("\nSintaksna greska", cur_token);
+        report_error("\nSyntax error", cur_token);
     }
-  
+
     public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
-        report_fatal_error("Fatalna greska, parsiranje se ne moze nastaviti", cur_token);
+        report_fatal_error("Fatal error, parsing terminated.", cur_token);
     }
 
     public void report_error(String message, Object info) {
     	errorDetected = true;
-    	StringBuilder msg = new StringBuilder(message); 
+    	StringBuilder msg = new StringBuilder(message);
     	if (info instanceof Symbol)
-            msg.append (" na liniji ").append(((Symbol)info).left);
+            msg.append (" on line ").append(((Symbol)info).left);
         log.error(msg.toString());
     }
-    
+
     public void report_info(String message, Object info) {
-    	StringBuilder msg = new StringBuilder(message); 
+    	StringBuilder msg = new StringBuilder(message);
     	if (info instanceof Symbol)
-            msg.append (" na liniji ").append(((Symbol)info).left);
+            msg.append (" on line ").append(((Symbol)info).left);
         log.info(msg.toString());
     }
-    
+
 :}
 
 scan with {:
 	Symbol s = this.getScanner().next_token();
-	if (s != null && s.value != null) 
+	if (s != null && s.value != null)
 		log.info(s.toString() + " " + s.value.toString());
 	return s;
 :}
 
+//-------------------------------------------terminal-symbols----------------------------------------
 
-terminal PROG, LBRACE, RBRACE, SEMI, LPAREN, RPAREN, COMMA, PRINT, RETURN, PLUS, EQUAL, VOID;
-terminal Integer NUMBER ;
-terminal String IDENT ;
-terminal IF, ELSE;
+terminal PROG, RETURN, VOID, PRINT, READ, CONST, ASSIGN, ENUM, FOREACH, IMPL;
+terminal LBRACE, RBRACE, LBRACKET, RBRACKET, LPAREN, RPAREN, SEMI, COLON, DOT, COMMA;
+terminal DEG, MUL, DIV, MOD, PLUS, MINUS, INC, DEC;
+terminal AND, OR, EQ, NEQ, GT, GE, LT, LE;
 
-nonterminal MethodDeclList, VarDecl;
-nonterminal FormalParamList, FormalParamDecl, FormPars, ActualPars, ActualParamList; 
-nonterminal StatementList, Statement, Addop;
-nonterminal Unmatched, Matched;
+terminal IF, ELSE, DO, WHILE, BREAK, CONTINUE;
+terminal CLASS, EXTENDS, THIS, NEW;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, Designator, MethodDecl, MethodTypeName; 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList; 
+terminal String BOOL;
+terminal Integer NUMBER;
+terminal Character CHAR;
+terminal String IDENT;
 
-Program ::= (Program) PROG ProgName:p VarDeclList LBRACE MethodDeclList RBRACE 
+//-----------------------------------------nonterminal-symbols---------------------------------------
+
+nonterminal Program, DeclList, MethodDeclList;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName; // object - name
+nonterminal ConstDecl, VarDecl, ClassDecl;
+nonterminal ConstSingle, ConstMulti, ConstVal;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ClassName; // object - name
+nonterminal ClassVarDeclList, DerivedFrom;
+nonterminal VarList, Var, VarDeclList;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj MethodTypeName; // object - name
+nonterminal MethodDecl, ReturnType, FormPars;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type; // struct - any type
+nonterminal Statement, StatementList, PrintVal, DesignatorStatement, DesigOp, DesigList, ActPars, While, ForEach;
+nonterminal Condition, CondTerm, CondFact;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr, Term, Factor; // struct - holding type
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator; // object - name
+nonterminal Assignop, Relop, Addop, Mulop;
+
+precedence left ELSE;
+
+//---------------------------------------program-declaration---------------------------------------
+
+Program ::= (Program) PROG ProgName:programName DeclList LBRACE MethodDeclList RBRACE
 ;
 
-ProgName ::= (ProgName) IDENT:pName 
+ProgName ::= (ProgName) IDENT:programName
 ;
 
-VarDeclList ::= (VarDeclarations) VarDeclList VarDecl  
-				|
-				(NoVarDecl)/* epsilon */ 
-				;
-				
-VarDecl ::= (VarDecl) Type:varType IDENT:varName SEMI 
-;
-
-Type ::= (Type) IDENT:typeName 
-;
-
-MethodDeclList ::= (MethodDeclarations) MethodDeclList MethodDecl
-					|
-					(NoMethodDecl)/* epsilon */
-					;
-
-MethodDecl ::= (MethodDecl) MethodTypeName
-			   LPAREN FormPars RPAREN VarDeclList LBRACE StatementList RBRACE 
-			   ;
-
-MethodTypeName ::= (MethodTypeName) Type:retType IDENT:methName
-;
-
-FormPars ::= (FormParams) FormalParamList | (NoFormParam) /* epsilon */ ;
-
-FormalParamList ::= (FormalParamDecls) FormalParamList COMMA FormalParamDecl
-					|
-					(SingleFormalParamDecl) FormalParamDecl
-					;
-					
-FormalParamDecl ::= (FormalParamDecl) Type IDENT ;
-
-StatementList ::= (Statements) StatementList Statement 
-					|
-				  (NoStmt) /* epsilon */
-				  ;
-
-Statement ::= (MatchedStmt) Matched | (UnmachedStmt) Unmatched ;
-
-Unmatched ::= (UnmatchedIf) IF Expr Statement | (UnmatchedIfElse) IF Expr Matched ELSE Unmatched;
-	
-				  
-Matched ::= (Assignment) Designator:dest EQUAL Expr:e SEMI 
-			  |
-			  (ErrAssignment) Designator EQUAL error SEMI
-			  {: parser.log.debug("Uspesan oporavak od greske pri dodeli vrednosti."); :}
-			  |
-			  (PrintStmt) PRINT LPAREN Expr RPAREN SEMI 
-			  |
-			  (ReturnExpr) RETURN Expr:t SEMI
-			  |
-			  (ReturnNoExpr) RETURN SEMI
-			  | 
-			  (MatchedIf) IF Expr Matched ELSE Matched
-			  |
-			  (ProcCall) Designator:func LPAREN ActualPars RPAREN SEMI
-			  ;
-			  
-Expr ::= (AddExpr) Expr:te Addop Term:t
-		 |
-		 (TermExpr) Term:t
-		 ;
-
-Term ::= (Term) Factor:t 
-;
-
-Factor ::= (Const) NUMBER
+DeclList ::= (ConstList) DeclList ConstDecl
 			|
-		   (Var) Designator:d
-		    |
-		   (FuncCall) Designator:func LPAREN ActualPars RPAREN
-		   ;
-
-ActualPars ::= (Actuals) ActualParamList 
-				| 
-			   (NoActuals) /* epsilon */ 
-			   ;
-			   
-ActualParamList ::= (ActualParams) ActualParamList COMMA Expr
-					|
-					(ActualParam) Expr
-					;
-
-Designator ::= (Designator) IDENT:name
+			(VariablesList) DeclList VarDecl
+			|
+			(ClassList) DeclList ClassDecl
+			|
+			(EmptyDeclList) /* epsilon */
 ;
 
-Addop ::= (Addop) PLUS ;
+//---------------------------------------------constant------------------------------------------------
+
+ConstDecl ::= (ConstDecl) CONST Type:constType ConstSingle ConstMulti SEMI
+;
+
+ConstSingle ::= (ConstSingle) IDENT:constName ASSIGN ConstVal
+;
+
+ConstMulti ::= (ConstListNonEmpty) ConstMulti COMMA ConstSingle
+            |
+            (ConstListEmpty) /* epsilon */
+;
+
+ConstVal ::= (BoolVal) BOOL:boolVal
+		|
+		(NumVal) NUMBER:numVal
+		|
+		(ChVal) CHAR:chVal
+;
+
+//----------------------------------------------class-----------------------------------------------
+
+ClassDecl ::= (ClassDeclWithMethods) ClassName LBRACE ClassVarDeclList LBRACE MethodDeclList RBRACE RBRACE
+            |
+            (ClassDeclNoMethods) ClassName LBRACE ClassVarDeclList RBRACE
+;
+
+ClassName ::= CLASS IDENT:className DerivedFrom
+;
+
+ClassVarDeclList ::= (ClassVarListValid) ClassVarDeclList VarDecl
+			   		|
+			   		(NoClassVariables) /* epsilon */
+;
+
+DerivedFrom ::= (BaseClass) EXTENDS Type:baseClassType
+			|
+			(DerivedClass) /* epsilon */
+;
+
+//--------------------------------------------variable-------------------------------------------------
+
+VarDecl ::= (VarDeclValid) Type:varType VarList SEMI
+			|
+			(MultiVarDeclErr) error COMMA:e VarList SEMI
+			{:
+				parser.report_error("Syntax error in global variable declaration. Recovery until COMMA on line " + eleft, null);
+			    parser.syntaxErrors.add(new MJCompilerError(eleft, CompilerErrorType.SYNTAX_ERR,
+			    "Syntax error in global variable declaration. Recovery until COMMA "));
+			:}
+			|
+			(VarDeclErr) error SEMI:e
+			{:
+				parser.report_error("Syntax error in global variable declaration. Recovery until SEMI on line " + eleft, null);
+			    parser.syntaxErrors.add(new MJCompilerError(eleft, CompilerErrorType.SYNTAX_ERR,
+			    "Syntax error in global variable declaration. Recovery until SEMI "));
+			:}
+;
+
+VarList ::= (FirstVarDecl) Var
+			|
+			(VarListDecl) VarList COMMA Var
+;
+
+Var ::= (SingleVar) IDENT:varName
+		|
+		(ArrayVar) IDENT:varName LBRACKET RBRACKET
+;
+
+VarDeclList ::= (VarsDeclList) VarDeclList VarDecl
+			|
+			(EmptyVarsList) /* epsilon */
+;
+
+//---------------------------------------------method--------------------------------------------------
+
+MethodDeclList ::= (MethodsDeclList) MethodDeclList MethodDecl
+                |
+                (EmptyMethodDelcList) /* epsilon */
+;
+
+MethodDecl ::= (MethodDeclPars)	MethodTypeName:methodTypeName LPAREN FormPars RPAREN VarDeclList LBRACE StatementList RBRACE
+            |
+            (MethodDeclNoPars) MethodTypeName:methodTypeName LPAREN RPAREN VarDeclList LBRACE StatementList RBRACE
+;
+
+MethodTypeName ::= (MethodTypeName) ReturnType:returnType IDENT:methodName
+;
+
+ReturnType ::= (NonEmptyReturnType) Type:returnType
+			|
+			(VoidReturnType) VOID
+;
+
+FormPars ::= (FormParSingle) Type:parameterType IDENT:parameterName
+		|
+		(FormParSingleArr) Type:parameterType IDENT:parameterName LBRACKET RBRACKET
+		|
+		(FormParsMulti) FormPars COMMA Type:parameterType IDENT:parameterName
+		|
+		(FormParsArrMulti) FormPars COMMA Type:parameterType IDENT:parameterName LBRACKET RBRACKET
+		|
+		(FormParsErr) error:e
+		{:
+			parser.report_error("Syntax error in declaration of formal function parameters. on line " + eleft, null);
+		    parser.syntaxErrors.add(new MJCompilerError(eleft, CompilerErrorType.SYNTAX_ERR,
+		    "Syntax error in declaration of formal function parameters. "));
+		:}
+;
+
+Type ::= (Type) IDENT:typeName
+;
+
+//--------------------------------------------statement--------------------------------------------------
+
+Statement ::= (StatDesignator) DesignatorStatement SEMI
+            |
+            (StatIf) IF LPAREN Condition RPAREN Statement
+            |
+            (StatIfElse) IF LPAREN Condition RPAREN Statement ELSE Statement
+			|
+			(IfCondErr) IF error:e RPAREN
+			{:
+				parser.report_error("Sytax error in logical expression. Recovery until RPAREN on line " + eleft, null);
+			    parser.syntaxErrors.add(new MJCompilerError(eleft, CompilerErrorType.SYNTAX_ERR,
+			    "Sytax error in logical expression. Recovery until RPAREN "));
+			:}
+			|
+			(StatWhile) While LPAREN Condition RPAREN Statement
+			|
+			(StatBreak) BREAK SEMI
+			|
+			(StatContinue) CONTINUE SEMI
+			|
+			(StatReturnVoid) RETURN SEMI
+			|
+			(StatReturn) RETURN Expr SEMI
+			|
+			(StatRead) READ LPAREN Designator RPAREN SEMI
+			|
+			(StatPrint) PRINT LPAREN PrintVal RPAREN SEMI
+			|
+			(StatForeach) Designator DOT ForEach LPAREN IDENT:iter IMPL Statement RPAREN SEMI
+			|
+			(StatList) LBRACE StatementList RBRACE
+;
+
+StatementList ::= (StList) StatementList Statement
+				|
+				(EmptyStList) /* epsilon */
+;
+
+While ::= (While) WHILE
+;
+
+ForEach ::= (ForEach) FOREACH
+;
+
+PrintVal ::= (PrintExpr) Expr
+			|
+			(PrintWithConst) Expr COMMA NUMBER:numConstVal
+;
+
+DesignatorStatement ::= (DesignatorStmt) Designator DesigOp
+					|
+					(DesignatorAssignment) LBRACKET DesigList RBRACKET ASSIGN Designator
+;
+
+DesigOp ::= (DesigAssign) Assignop Expr
+			|
+			(DesigErr) error:e
+			{:
+				parser.report_error("Syntax error in designator expression. Recovery until SEMI on line " + eleft, null);
+			    parser.syntaxErrors.add(new MJCompilerError(eleft, CompilerErrorType.SYNTAX_ERR,
+			    "Syntax error in designator expression. Recovery until SEMI "));
+			:}
+			|
+			(DesigActParams) LPAREN ActPars RPAREN
+			|
+			(DesigNoParams) LPAREN RPAREN
+			|
+			(DesigInc) INC
+			|
+			(DesigDec) DEC
+;
+
+DesigList ::= (EmptyDesigList) /* epsilon */
+            |
+            (SingleDesig) Designator
+            |
+            (DesigListComma) DesigList COMMA
+            |
+            (DesigListLong) DesigList COMMA Designator
+;
+
+ActPars ::= (ActParams) ActPars COMMA Expr
+		|
+		(SingleActParam) Expr
+;
+
+//--------------------------------------------condition---------------------------------------------------
+
+Condition ::= (MultiCondition) Condition OR CondTerm
+			|
+			(SingleCondition) CondTerm
+;
+
+CondTerm ::= (SingleCondTerm) CondFact
+			|
+			(MultiCondTerm) CondTerm AND CondFact
+;
+
+CondFact ::= (SingleCondFact) Expr
+			|
+			(MultipleCondFact) Expr Relop Expr
+;
+
+//--------------------------------------------expressions--------------------------------------------------
+
+Expr ::= (TermExpr) Term
+		|
+		(NegTermExpr) MINUS Term
+		|
+		(MultiTermExpr) Expr Addop Term
+;
+
+Term ::= (SingleTerm) Factor
+		|
+		(MultiTerm) Term Mulop Factor
+;
+
+Factor ::= (FactorDesignator) Designator
+        |
+        (FactorDesignatorCall) Designator LPAREN RPAREN
+        |
+        (FactorDesignatorParams) Designator LPAREN ActPars RPAREN
+		|
+		(FactorNum) NUMBER:numVal
+		|
+		(FactorCh) CHAR:chVal
+		|
+		(FactorBool) BOOL:boolVal
+		|
+		(FactorNewType) NEW Type LPAREN RPAREN
+		|
+		(FactorNewTypeParams) NEW Type LPAREN ActPars RPAREN
+		|
+		(FactorNewTypeExpr) NEW Type LBRACKET Expr RBRACKET
+		|
+		(FactorExpr) LPAREN Expr RPAREN
+;
+
+//--------------------------------------------designator--------------------------------------------------
+
+Designator ::= (DesignatorIdent) IDENT:designatorName
+            |
+            (DesignatorDotMember) Designator DOT IDENT:designatorName
+            |
+            (DesignatorExpr) Designator LBRACKET Expr:indexExprVal RBRACKET
+;
+
+//-------------------------------------------operations-------------------------------------------------
+
+Assignop ::= (Assignop) ASSIGN
+;
+
+Relop ::= (Eq) EQ
+		|
+		(Neq) NEQ
+		|
+		(Gt) GT
+		|
+		(Ge) GE
+		|
+		(Le) LE
+		|
+		(Lt) LT
+;
+
+Addop ::= (Add) PLUS
+		|
+		(Sub) MINUS
+;
+
+Mulop ::= (Mul) MUL
+			|
+			(Div) DIV
+			|
+			(Mod) MOD
+;
