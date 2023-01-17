@@ -43,41 +43,44 @@ public class Compiler {
 			MJParser p = new MJParser(lexer);
 	        Symbol s = p.parse();  //pocetak parsiranja
 	        SyntaxNode prog = (SyntaxNode)(s.value);
-	        
-			Tab.init(); // Universe scope
-			SemanticAnalyzer semanticCheck = new SemanticAnalyzer();
-			prog.traverseBottomUp(semanticCheck);
-			log.info(" Deklarisanih globalnih promenljivih ima " + semanticCheck.globalVarCount());
-			log.info(" Deklarisanih lokalnih promenljivih ima " + semanticCheck.localVarCount());
-			log.info(" Poziva globalnih funkcija ima " + semanticCheck.globalFunctionCallCount());
-			log.info(" Deklarisanih simbolickih konstanti ima " + semanticCheck.symbolicConstCount());
-			log.info(" Koriscenje formalnog parametra funkcije detektovano " + semanticCheck.formParamUsageCount() + " puta");
 
-			Tab.dump();
-	        
-	        if (!p.errorDetected && semanticCheck.passed()) {
+			if(!p.errorDetected) {
+				Tab.init(); // Universe scope
+				SemanticAnalyzer semanticCheck = new SemanticAnalyzer();
+				prog.traverseBottomUp(semanticCheck);
+				log.info(" Deklarisanih globalnih promenljivih ima " + semanticCheck.globalVarCount());
+				log.info(" Deklarisanih lokalnih promenljivih ima " + semanticCheck.localVarCount());
+				log.info(" Poziva globalnih funkcija ima " + semanticCheck.globalFunctionCallCount());
+				log.info(" Deklarisanih simbolickih konstanti ima " + semanticCheck.symbolicConstCount());
+				log.info(" Koriscenje formalnog parametra funkcije detektovano " + semanticCheck.formParamUsageCount() + " puta");
+
+				Tab.dump();
+
+				if (semanticCheck.passed()) {
 //	        	File objFile = new File(args[1]);
-				String objFilePath = args[0].replace(".mj",".obj");
-				File objFile = new File(objFilePath);
+					String objFilePath = args[0].replace(".mj",".obj");
+					File objFile = new File(objFilePath);
 
-	        	log.info("Generating bytecode file: " + objFile.getAbsolutePath());
-	        	if (objFile.exists())
-	        		objFile.delete();
-	        	
-	        	// Code generation...
-	        	CodeGenerator codeGenerator = new CodeGenerator();
+					log.info("Generating bytecode file: " + objFile.getAbsolutePath());
+					if (objFile.exists())
+						objFile.delete();
 
-	        	prog.traverseBottomUp(codeGenerator);
-	        	Code.mainPc = codeGenerator.getMainPc();
-	        	Code.write(new FileOutputStream(objFile));
-	        	log.info("Parsiranje uspesno zavrseno!");
+					// Code generation...
+					CodeGenerator codeGenerator = new CodeGenerator();
 
-				disasm.main(new String[]{objFilePath});
-				Run.main(new String[]{objFilePath/*,"-debug"*/});
-	        }
-	        else {
-	        	log.error("Parsiranje NIJE uspesno zavrseno!");
-	        }
+					prog.traverseBottomUp(codeGenerator);
+					Code.mainPc = codeGenerator.getMainPc();
+					Code.write(new FileOutputStream(objFile));
+					log.info("Parsiranje uspesno zavrseno!");
+
+					disasm.main(new String[]{objFilePath});
+					Run.main(new String[]{objFilePath/*,"-debug"*/});
+				}
+				else {
+					log.error("Parsiranje NIJE uspesno zavrseno!");
+				}
+			}
+
 		}
 	}
 }

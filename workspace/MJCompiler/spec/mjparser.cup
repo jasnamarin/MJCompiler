@@ -156,18 +156,18 @@ DerivedFrom ::= (BaseClass) EXTENDS Type:baseClassType
 
 VarDecl ::= (VarDeclValid) Type:varType VarList SEMI
 			|
-			(MultiVarDeclErr) error COMMA:e VarList SEMI
+			(MultiVarDeclErr) error COMMA:e
 			{:
-				parser.report_error("Syntax error in global variable declaration. Recovery until COMMA on line " + eleft, null);
+				parser.report_error("Sintaksna greska pri deklaraciji globalne promenljive. Oporavak do , na liniji " + eleft, null);
 			    parser.syntaxErrors.add(new MJCompilerError(eleft, CompilerErrorType.SYNTAX_ERR,
-			    "Syntax error in global variable declaration. Recovery until COMMA "));
+			    "Sintaksna greska pri deklaraciji globalne promenljive. Oporavak do , "));
 			:}
 			|
 			(VarDeclErr) error SEMI:e
 			{:
-				parser.report_error("Syntax error in global variable declaration. Recovery until SEMI on line " + eleft, null);
+				parser.report_error("Sintaksna greska pri deklaraciji globalne promenljive. Oporavak do ; na liniji " + eleft, null);
 			    parser.syntaxErrors.add(new MJCompilerError(eleft, CompilerErrorType.SYNTAX_ERR,
-			    "Syntax error in global variable declaration. Recovery until SEMI "));
+			    "Sintaksna greska pri deklaraciji globalne promenljive. Oporavak do ; "));
 			:}
 ;
 
@@ -284,9 +284,9 @@ DesigOp ::= (DesigAssign) Assignop Expr
 			|
 			(DesigErr) error:e
 			{:
-				parser.report_error("Syntax error in designator expression. Recovery until SEMI on line " + eleft, null);
+				parser.report_error("Sintaksna greska u konstrukciji iskaza dodele. Oporavak do ; na liniji " + eleft, null);
 			    parser.syntaxErrors.add(new MJCompilerError(eleft, CompilerErrorType.SYNTAX_ERR,
-			    "Syntax error in designator expression. Recovery until SEMI "));
+			    "Sintaksna greska u konstrukciji iskaza dodele. Oporavak do ; "));
 			:}
 			|
 			(DesigActParams) LPAREN ActPars RPAREN

@@ -1,0 +1,72 @@
+INFO  20:11:49,100 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  20:11:49,232 - #2 program
+INFO  20:11:49,232 - #51 test1
+INFO  20:11:49,232 - #7 const
+INFO  20:11:49,235 - #51 int
+INFO  20:11:49,235 - #51 konstanta
+INFO  20:11:49,237 - #8 =
+INFO  20:11:49,237 - #27 -
+ERROR 20:11:49,237 - 
+Sintaksna greska u liniji 5
+INFO  20:11:49,237 - #49 3
+INFO  20:11:49,237 - #18 ;
+INFO  20:11:49,237 - #51 int
+INFO  20:11:49,238 - #51 niz
+INFO  20:11:49,238 - #14 [
+ERROR 20:11:49,238 - Syntax error in global variable declaration. Recovery until SEMI on line 5
+INFO  20:11:49,243 - #15 ]
+INFO  20:11:49,243 - #21 ,
+INFO  20:11:49,243 - #51 a
+INFO  20:11:49,243 - #21 ,
+INFO  20:11:49,244 - #51 b
+INFO  20:11:49,244 - #18 ;
+INFO  20:11:49,244 - #51 char
+INFO  20:11:49,244 - #51 nizch
+INFO  20:11:49,244 - #14 [
+INFO  20:11:49,244 - #15 ]
+INFO  20:11:49,244 - #18 ;
+INFO  20:11:49,244 - #51 int
+INFO  20:11:49,244 - #49 123
+ERROR 20:11:49,244 - 
+Sintaksna greska u liniji 10
+INFO  20:11:49,244 - #18 ;
+INFO  20:11:49,244 - #12 {
+INFO  20:11:49,244 - #4 void
+INFO  20:11:49,244 - #51 main
+ERROR 20:11:49,245 - Syntax error in global variable declaration. Recovery until SEMI on line 10
+INFO  20:11:49,247 - #16 (
+INFO  20:11:49,248 - #17 )
+INFO  20:11:49,248 - #51 int
+INFO  20:11:49,250 - #51 bodovi
+INFO  20:11:49,250 - #18 ;
+INFO  20:11:49,250 - #12 {
+INFO  20:11:49,250 - #51 bodovi
+INFO  20:11:49,251 - #8 =
+INFO  20:11:49,251 - #49 0
+INFO  20:11:49,253 - #18 ;
+INFO  20:11:49,253 - #51 bodovi
+INFO  20:11:49,254 - #28 ++
+INFO  20:11:49,254 - #18 ;
+INFO  20:11:49,255 - #51 bodovi
+INFO  20:11:49,255 - #8 =
+INFO  20:11:49,255 - #51 bodovi
+INFO  20:11:49,258 - #26 +
+INFO  20:11:49,258 - #51 konstanta
+INFO  20:11:49,261 - #18 ;
+INFO  20:11:49,261 - #51 bodovi
+INFO  20:11:49,261 - #29 --
+INFO  20:11:49,261 - #18 ;
+INFO  20:11:49,262 - #5 print
+INFO  20:11:49,262 - #16 (
+INFO  20:11:49,262 - #51 bodovi
+INFO  20:11:49,262 - #17 )
+INFO  20:11:49,263 - #18 ;
+INFO  20:11:49,263 - #13 }
+INFO  20:11:49,263 - #13 }
+INFO  20:11:49,276 - Detektovana globalna deklaracija niza niz, u liniji 7
+INFO  20:11:49,276 - Detektovana deklaracija globalne promenljive a, u liniji 7
+INFO  20:11:49,276 - Detektovana deklaracija globalne promenljive b, u liniji 7
+INFO  20:11:49,276 - Detektovana globalna deklaracija niza nizch, u liniji 8
+INFO  20:11:49,277 - Detektovana deklaracija lokalne promenljive bodovi, u liniji 14
+ERROR 20:11:49,278 - Greska - korisceno ime nikada nije deklarisano!, u liniji 18
+ERROR 20:11:49,278 - Greska - jedini tip dozvoljen kod operacije sabiranja je int!, u liniji 18

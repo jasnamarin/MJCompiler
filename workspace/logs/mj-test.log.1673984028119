@@ -1,0 +1,30 @@
+INFO  20:33:33,949 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  20:33:34,055 - #2 program
+INFO  20:33:34,055 - #51 test1
+INFO  20:33:34,055 - #7 const
+INFO  20:33:34,057 - #51 int
+INFO  20:33:34,057 - #51 konstanta
+INFO  20:33:34,057 - #8 =
+INFO  20:33:34,058 - #49 30
+INFO  20:33:34,058 - #18 ;
+INFO  20:33:34,060 - #51 int
+INFO  20:33:34,061 - #51 niz
+INFO  20:33:34,061 - #14 [
+INFO  20:33:34,062 - #15 ]
+INFO  20:33:34,062 - #21 ,
+INFO  20:33:34,062 - #51 a
+INFO  20:33:34,062 - #21 ,
+INFO  20:33:34,062 - #51 b
+INFO  20:33:34,062 - #18 ;
+INFO  20:33:34,062 - #51 char
+INFO  20:33:34,062 - #51 a1
+INFO  20:33:34,062 - #21 ,
+INFO  20:33:34,064 - #51 b1
+INFO  20:33:34,065 - #21 ,
+INFO  20:33:34,065 - #49 123
+ERROR 20:33:34,065 - 
+Sintaksna greska u liniji 8
+INFO  20:33:34,065 - #21 ,
+INFO  20:33:34,065 - #51 c1
+INFO  20:33:34,065 - #18 ;
+INFO  20:33:34,065 - #51 char

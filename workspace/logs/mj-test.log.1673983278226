@@ -1,0 +1,65 @@
+INFO  20:20:43,417 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  20:20:43,531 - #2 program
+INFO  20:20:43,531 - #51 test1
+INFO  20:20:43,531 - #7 const
+INFO  20:20:43,533 - #51 int
+INFO  20:20:43,533 - #51 konstanta
+INFO  20:20:43,535 - #8 =
+INFO  20:20:43,535 - #27 -
+ERROR 20:20:43,535 - 
+Sintaksna greska u liniji 5
+INFO  20:20:43,535 - #49 3
+INFO  20:20:43,535 - #18 ;
+INFO  20:20:43,535 - #51 int
+INFO  20:20:43,536 - #51 niz
+INFO  20:20:43,536 - #14 [
+ERROR 20:20:43,536 - Syntax error in global variable declaration. Recovery until SEMI on line 5
+INFO  20:20:43,539 - #15 ]
+INFO  20:20:43,539 - #21 ,
+INFO  20:20:43,539 - #51 a
+INFO  20:20:43,539 - #21 ,
+INFO  20:20:43,539 - #51 b
+INFO  20:20:43,539 - #18 ;
+INFO  20:20:43,539 - #51 char
+INFO  20:20:43,539 - #51 nizch
+INFO  20:20:43,539 - #14 [
+INFO  20:20:43,539 - #15 ]
+INFO  20:20:43,540 - #18 ;
+INFO  20:20:43,540 - #51 int
+INFO  20:20:43,540 - #49 123
+ERROR 20:20:43,540 - 
+Sintaksna greska u liniji 10
+INFO  20:20:43,540 - #18 ;
+INFO  20:20:43,540 - #12 {
+INFO  20:20:43,540 - #4 void
+INFO  20:20:43,540 - #51 main
+ERROR 20:20:43,540 - Syntax error in global variable declaration. Recovery until SEMI on line 10
+INFO  20:20:43,542 - #16 (
+INFO  20:20:43,542 - #17 )
+INFO  20:20:43,543 - #51 int
+INFO  20:20:43,543 - #51 bodovi
+INFO  20:20:43,543 - #18 ;
+INFO  20:20:43,544 - #12 {
+INFO  20:20:43,544 - #51 bodovi
+INFO  20:20:43,545 - #8 =
+INFO  20:20:43,545 - #49 0
+INFO  20:20:43,546 - #18 ;
+INFO  20:20:43,546 - #51 bodovi
+INFO  20:20:43,546 - #28 ++
+INFO  20:20:43,546 - #18 ;
+INFO  20:20:43,547 - #51 bodovi
+INFO  20:20:43,547 - #8 =
+INFO  20:20:43,547 - #51 bodovi
+INFO  20:20:43,547 - #26 +
+INFO  20:20:43,549 - #51 konstanta
+INFO  20:20:43,551 - #18 ;
+INFO  20:20:43,551 - #51 bodovi
+INFO  20:20:43,552 - #29 --
+INFO  20:20:43,552 - #18 ;
+INFO  20:20:43,553 - #5 print
+INFO  20:20:43,553 - #16 (
+INFO  20:20:43,553 - #51 bodovi
+INFO  20:20:43,553 - #17 )
+INFO  20:20:43,553 - #18 ;
+INFO  20:20:43,553 - #13 }
+INFO  20:20:43,553 - #13 }

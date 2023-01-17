@@ -1,0 +1,70 @@
+INFO  20:47:54,345 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  20:47:54,444 - #2 program
+INFO  20:47:54,444 - #51 test1
+INFO  20:47:54,444 - #7 const
+INFO  20:47:54,446 - #51 int
+INFO  20:47:54,446 - #51 konstanta
+INFO  20:47:54,447 - #8 =
+INFO  20:47:54,447 - #49 30
+INFO  20:47:54,447 - #18 ;
+INFO  20:47:54,450 - #51 int
+INFO  20:47:54,451 - #51 niz
+INFO  20:47:54,451 - #14 [
+INFO  20:47:54,451 - #15 ]
+INFO  20:47:54,452 - #21 ,
+INFO  20:47:54,452 - #51 a
+INFO  20:47:54,452 - #21 ,
+INFO  20:47:54,452 - #51 b
+INFO  20:47:54,452 - #18 ;
+INFO  20:47:54,452 - #51 char
+INFO  20:47:54,452 - #51 c
+INFO  20:47:54,452 - #21 ,
+INFO  20:47:54,452 - #49 123
+ERROR 20:47:54,454 - 
+Sintaksna greska u liniji 8
+INFO  20:47:54,454 - #21 ,
+INFO  20:47:54,454 - #51 char
+INFO  20:47:54,455 - #51 nizch
+INFO  20:47:54,455 - #14 [
+ERROR 20:47:54,455 - Sintaksna greska pri deklaraciji globalne promenljive. Oporavak do , na liniji 8
+INFO  20:47:54,458 - #15 ]
+INFO  20:47:54,458 - #18 ;
+INFO  20:47:54,458 - #51 int
+INFO  20:47:54,458 - #49 123
+ERROR 20:47:54,458 - 
+Sintaksna greska u liniji 11
+INFO  20:47:54,458 - #18 ;
+INFO  20:47:54,458 - #12 {
+INFO  20:47:54,458 - #4 void
+INFO  20:47:54,458 - #51 main
+ERROR 20:47:54,458 - Sintaksna greska pri deklaraciji globalne promenljive. Oporavak do ; na liniji 11
+INFO  20:47:54,461 - #16 (
+INFO  20:47:54,462 - #17 )
+INFO  20:47:54,462 - #51 int
+INFO  20:47:54,463 - #51 bodovi
+INFO  20:47:54,463 - #18 ;
+INFO  20:47:54,463 - #12 {
+INFO  20:47:54,464 - #51 bodovi
+INFO  20:47:54,464 - #8 =
+INFO  20:47:54,465 - #49 0
+INFO  20:47:54,466 - #18 ;
+INFO  20:47:54,467 - #51 bodovi
+INFO  20:47:54,467 - #28 ++
+INFO  20:47:54,467 - #18 ;
+INFO  20:47:54,469 - #51 bodovi
+INFO  20:47:54,469 - #8 =
+INFO  20:47:54,469 - #51 bodovi
+INFO  20:47:54,470 - #26 +
+INFO  20:47:54,470 - #51 konstanta
+INFO  20:47:54,471 - #16 (
+INFO  20:47:54,471 - #18 ;
+ERROR 20:47:54,471 - 
+Sintaksna greska u liniji 19
+INFO  20:47:54,471 - #5 print
+INFO  20:47:54,472 - #16 (
+INFO  20:47:54,472 - #51 bodovi
+ERROR 20:47:54,472 - Sintaksna greska u konstrukciji iskaza dodele. Oporavak do ; na liniji 19
+INFO  20:47:54,473 - #17 )
+INFO  20:47:54,474 - #18 ;
+INFO  20:47:54,474 - #13 }
+INFO  20:47:54,474 - #13 }

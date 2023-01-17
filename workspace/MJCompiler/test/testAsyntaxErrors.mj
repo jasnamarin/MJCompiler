@@ -1,0 +1,26 @@
+// Test1
+
+program test1
+
+	const int konstanta = 30;
+
+	int niz[], a, b;
+	char c, 123,
+	char nizch[];
+
+	int 123;
+
+{
+	void main().
+		int bodovi;
+	{
+		bodovi = 0;
+		bodovi++;
+		bodovi = bodovi + konstanta (;
+
+		print(bodovi);
+
+	}
+}
+
+
