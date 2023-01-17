@@ -1,0 +1,37 @@
+INFO  16:57:22,315 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  16:57:22,519 - #2 program
+INFO  16:57:22,519 - #51 test302
+INFO  16:57:22,519 - #7 const
+INFO  16:57:22,525 - #51 int
+INFO  16:57:22,525 - #51 jedan
+INFO  16:57:22,527 - #29 =
+ERROR 16:57:22,528 - 
+Syntax error on line 5
+INFO  16:57:22,528 - #49 1
+INFO  16:57:22,529 - #17 ;
+INFO  16:57:22,529 - #51 int
+INFO  16:57:22,530 - #51 i
+INFO  16:57:22,530 - #17 ;
+ERROR 16:57:22,532 - Syntax error in global variable declaration. Recovery until SEMI on line 8
+INFO  16:57:22,541 - #11 {
+INFO  16:57:22,542 - #4 void
+INFO  16:57:22,544 - #51 main
+INFO  16:57:22,547 - #15 (
+INFO  16:57:22,549 - #16 )
+INFO  16:57:22,549 - #11 {
+INFO  16:57:22,552 - #51 niz2
+INFO  16:57:22,554 - #29 =
+ERROR 16:57:22,555 - 
+Syntax error on line 14
+INFO  16:57:22,555 - #49 0
+INFO  16:57:22,555 - #17 ;
+INFO  16:57:22,555 - #5 print
+INFO  16:57:22,555 - #15 (
+INFO  16:57:22,555 - #51 niz2
+INFO  16:57:22,555 - #16 )
+INFO  16:57:22,556 - #17 ;
+INFO  16:57:22,556 - #12 }
+INFO  16:57:22,556 - #12 }
+ERROR 16:57:22,556 - Fatal error, parsing terminated. on line 20
+INFO  16:57:22,581 - Print calls = 0
+ERROR 16:57:22,583 - Parsiranje NIJE uspesno zavrseno!

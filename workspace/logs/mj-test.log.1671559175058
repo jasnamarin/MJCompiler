@@ -1,0 +1,30 @@
+INFO  18:57:07,763 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  18:57:07,836 - #2 program
+INFO  18:57:07,836 - #51 test301
+INFO  18:57:07,837 - #51 int
+INFO  18:57:07,838 - #51 niz
+INFO  18:57:07,839 - #13 [
+INFO  18:57:07,839 - #14 ]
+INFO  18:57:07,839 - #20 ,
+INFO  18:57:07,839 - #51 niz2
+INFO  18:57:07,839 - #13 [
+INFO  18:57:07,839 - #14 ]
+INFO  18:57:07,839 - #20 ,
+INFO  18:57:07,839 - #51 a
+INFO  18:57:07,840 - #20 ,
+INFO  18:57:07,840 - #51 b
+INFO  18:57:07,840 - #17 ;
+INFO  18:57:07,840 - #51 char
+INFO  18:57:07,840 - #51 nizch
+INFO  18:57:07,840 - #13 [
+INFO  18:57:07,840 - #14 ]
+INFO  18:57:07,840 - #17 ;
+INFO  18:57:07,840 - #7 const
+INFO  18:57:07,842 - #51 int
+INFO  18:57:07,843 - #51 c
+INFO  18:57:07,843 - #29 =
+ERROR 18:57:07,843 - 
+Syntax error on line 9
+ERROR 18:57:07,843 - Fatal error, parsing terminated. on line 9
+INFO  18:57:07,851 - Print calls = 0
+ERROR 18:57:07,852 - Parsiranje NIJE uspesno zavrseno!

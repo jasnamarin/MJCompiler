@@ -1,0 +1,46 @@
+INFO  17:44:06,743 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  17:44:06,963 - #2 program
+INFO  17:44:06,964 - #51 test301
+INFO  17:44:06,964 - #51 int
+INFO  17:44:06,969 - #51 niz
+INFO  17:44:06,972 - #13 [
+INFO  17:44:06,972 - #14 ]
+INFO  17:44:06,972 - #20 ,
+INFO  17:44:06,973 - #51 niz2
+INFO  17:44:06,973 - #13 [
+INFO  17:44:06,973 - #14 ]
+INFO  17:44:06,973 - #20 ,
+INFO  17:44:06,974 - #51 a
+INFO  17:44:06,974 - #20 ,
+INFO  17:44:06,974 - #51 b
+INFO  17:44:06,975 - #17 ;
+INFO  17:44:06,975 - #51 char
+INFO  17:44:06,975 - #51 nizch
+INFO  17:44:06,976 - #13 [
+INFO  17:44:06,976 - #14 ]
+INFO  17:44:06,976 - #17 ;
+INFO  17:44:06,976 - #11 {
+INFO  17:44:06,977 - #4 void
+INFO  17:44:06,979 - #51 main
+INFO  17:44:06,981 - #15 (
+INFO  17:44:06,983 - #16 )
+INFO  17:44:06,983 - #51 int
+INFO  17:44:06,985 - #51 bodovi
+INFO  17:44:06,985 - #17 ;
+INFO  17:44:06,986 - #51 bool
+INFO  17:44:06,986 - #51 bt
+INFO  17:44:06,986 - #17 ;
+INFO  17:44:06,986 - #11 {
+INFO  17:44:06,986 - #12 }
+INFO  17:44:06,988 - #12 }
+INFO  17:44:07,009 - Detected global array declaration niz in line 6
+INFO  17:44:07,010 - Detected global array declaration niz2 in line 6
+INFO  17:44:07,010 - Detected global variable declaration a in line 6
+INFO  17:44:07,010 - Detected global variable declaration b in line 6
+INFO  17:44:07,010 - Detected global array declaration nizch in line 7
+INFO  17:44:07,010 - Detected method main in line 10
+INFO  17:44:07,010 - Detected local variable declaration bodovi in line 11
+INFO  17:44:07,011 - Detected local variable declaration bt in line 12
+INFO  17:44:07,011 - Print calls = 0
+INFO  17:44:07,013 - Generating bytecode file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.obj
+INFO  17:44:07,019 - Parsiranje uspesno zavrseno!

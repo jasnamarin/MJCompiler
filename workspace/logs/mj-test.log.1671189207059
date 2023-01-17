@@ -1,0 +1,8 @@
+INFO  12:12:39,650 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  12:12:39,745 - #2 program
+INFO  12:12:39,745 - #51 MJProgram
+INFO  12:12:39,745 - #11 {
+INFO  12:12:39,747 - #12 }
+ERROR 12:12:39,757 - Error - main function missing!
+INFO  12:12:39,759 - Print calls = 0
+ERROR 12:12:39,760 - Parsiranje NIJE uspesno zavrseno!

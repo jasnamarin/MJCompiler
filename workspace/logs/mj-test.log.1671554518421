@@ -1,0 +1,49 @@
+INFO  17:41:30,697 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  17:41:30,879 - #2 program
+INFO  17:41:30,879 - #51 test301
+INFO  17:41:30,879 - #11 {
+INFO  17:41:30,882 - #4 void
+INFO  17:41:30,883 - #51 main
+INFO  17:41:30,886 - #15 (
+INFO  17:41:30,888 - #16 )
+INFO  17:41:30,888 - #51 int
+INFO  17:41:30,890 - #51 bodovi
+INFO  17:41:30,892 - #17 ;
+INFO  17:41:30,893 - #51 bool
+INFO  17:41:30,893 - #51 bt
+INFO  17:41:30,893 - #17 ;
+INFO  17:41:30,893 - #11 {
+INFO  17:41:30,893 - #51 bodovi
+INFO  17:41:30,895 - #29 =
+ERROR 17:41:30,896 - 
+Syntax error on line 11
+INFO  17:41:30,896 - #49 0
+INFO  17:41:30,896 - #17 ;
+INFO  17:41:30,896 - #51 bodovi
+INFO  17:41:30,899 - #27 ++
+INFO  17:41:30,899 - #17 ;
+INFO  17:41:30,900 - #51 bodovi
+INFO  17:41:30,900 - #29 =
+INFO  17:41:30,900 - #51 bodovi
+INFO  17:41:30,900 - #25 +
+INFO  17:41:30,900 - #51 jedan
+INFO  17:41:30,900 - #17 ;
+INFO  17:41:30,900 - #51 bodovi
+INFO  17:41:30,900 - #29 =
+INFO  17:41:30,901 - #51 bodovi
+INFO  17:41:30,901 - #22 *
+INFO  17:41:30,902 - #51 pet
+INFO  17:41:30,902 - #17 ;
+INFO  17:41:30,902 - #51 bodovi
+INFO  17:41:30,902 - #28 --
+INFO  17:41:30,902 - #17 ;
+INFO  17:41:30,902 - #5 print
+INFO  17:41:30,902 - #15 (
+INFO  17:41:30,902 - #51 bodovi
+INFO  17:41:30,902 - #16 )
+INFO  17:41:30,902 - #17 ;
+INFO  17:41:30,902 - #12 }
+INFO  17:41:30,902 - #12 }
+ERROR 17:41:30,903 - Fatal error, parsing terminated. on line 23
+INFO  17:41:30,922 - Print calls = 0
+ERROR 17:41:30,923 - Parsiranje NIJE uspesno zavrseno!

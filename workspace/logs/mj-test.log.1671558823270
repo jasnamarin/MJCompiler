@@ -1,0 +1,54 @@
+INFO  18:52:41,203 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  18:52:41,377 - #2 program
+INFO  18:52:41,377 - #51 test301
+INFO  18:52:41,377 - #51 int
+INFO  18:52:41,381 - #51 niz
+INFO  18:52:41,383 - #13 [
+INFO  18:52:41,384 - #14 ]
+INFO  18:52:41,384 - #20 ,
+INFO  18:52:41,384 - #51 niz2
+INFO  18:52:41,384 - #13 [
+INFO  18:52:41,384 - #14 ]
+INFO  18:52:41,385 - #20 ,
+INFO  18:52:41,385 - #51 a
+INFO  18:52:41,385 - #20 ,
+INFO  18:52:41,385 - #51 b
+INFO  18:52:41,385 - #17 ;
+INFO  18:52:41,386 - #51 char
+INFO  18:52:41,386 - #51 nizch
+INFO  18:52:41,386 - #13 [
+INFO  18:52:41,386 - #14 ]
+INFO  18:52:41,386 - #17 ;
+INFO  18:52:41,386 - #7 const
+INFO  18:52:41,389 - #51 int
+INFO  18:52:41,389 - #51 jedan
+INFO  18:52:41,389 - #29 =
+ERROR 18:52:41,389 - 
+Syntax error on line 9
+INFO  18:52:41,390 - #49 1
+INFO  18:52:41,390 - #17 ;
+INFO  18:52:41,390 - #11 {
+INFO  18:52:41,391 - #4 void
+INFO  18:52:41,391 - #51 main
+ERROR 18:52:41,392 - Syntax error in global variable declaration. Recovery until SEMI on line 9
+INFO  18:52:41,400 - #15 (
+INFO  18:52:41,403 - #16 )
+INFO  18:52:41,403 - #51 int
+INFO  18:52:41,405 - #51 bodovi
+INFO  18:52:41,405 - #17 ;
+INFO  18:52:41,405 - #51 bool
+INFO  18:52:41,406 - #51 bt
+INFO  18:52:41,406 - #17 ;
+INFO  18:52:41,406 - #11 {
+INFO  18:52:41,406 - #12 }
+INFO  18:52:41,408 - #12 }
+INFO  18:52:41,434 - Detected global array declaration niz in line 6
+INFO  18:52:41,434 - Detected global array declaration niz2 in line 6
+INFO  18:52:41,434 - Detected global variable declaration a in line 6
+INFO  18:52:41,435 - Detected global variable declaration b in line 6
+INFO  18:52:41,435 - Detected global array declaration nizch in line 7
+INFO  18:52:41,435 - Detected method main in line 12
+INFO  18:52:41,435 - Detected local variable declaration bodovi in line 13
+INFO  18:52:41,440 - Detected local variable declaration bt in line 14
+INFO  18:52:41,440 - Print calls = 0
+ERROR 18:52:41,442 - Parsiranje NIJE uspesno zavrseno!

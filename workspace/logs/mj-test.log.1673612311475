@@ -1,0 +1,8 @@
+ERROR 13:03:24,784 - Greska - Continue moze da se koristi samo unutar while / foreach petlji!
+ERROR 13:03:24,791 - Greska - Break moze da se koristi samo unutar while / foreach petlji!
+INFO  13:03:24,791 - Detektovan poziv globalne funkcije programa inkrement Linija: 70
+INFO  13:03:24,791 - Detektovan poziv globalne funkcije programa verify Linija: 73
+INFO  13:03:24,791 - Detektovan poziv globalne funkcije programa sum Linija: 80
+INFO  13:03:24,791 - Detektovan poziv globalne funkcije programa sum Linija: 80
+INFO  13:03:24,792 - Detektovan poziv globalne funkcije programa inkrement Linija: 83
+ERROR 13:03:24,794 - Parsiranje NIJE uspesno zavrseno!

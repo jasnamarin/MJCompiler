@@ -1,0 +1,130 @@
+INFO  19:16:04,953 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  19:16:05,053 - #2 program
+INFO  19:16:05,053 - #51 test_A_successful
+INFO  19:16:05,053 - #51 int
+INFO  19:16:05,055 - #51 a
+INFO  19:16:05,057 - #21 ,
+INFO  19:16:05,057 - #51 b
+INFO  19:16:05,057 - #21 ,
+INFO  19:16:05,057 - #51 c
+INFO  19:16:05,057 - #21 ,
+INFO  19:16:05,057 - #51 d
+INFO  19:16:05,057 - #21 ,
+INFO  19:16:05,058 - #51 e
+INFO  19:16:05,058 - #21 ,
+INFO  19:16:05,058 - #51 intArray
+INFO  19:16:05,058 - #14 [
+INFO  19:16:05,058 - #15 ]
+INFO  19:16:05,058 - #21 ,
+INFO  19:16:05,058 - #51 niz
+INFO  19:16:05,058 - #14 [
+INFO  19:16:05,058 - #15 ]
+INFO  19:16:05,060 - #21 ,
+INFO  19:16:05,061 - #51 nizTmp
+INFO  19:16:05,061 - #14 [
+INFO  19:16:05,061 - #15 ]
+INFO  19:16:05,061 - #21 ,
+INFO  19:16:05,061 - #51 nizIndex
+INFO  19:16:05,061 - #14 [
+INFO  19:16:05,061 - #15 ]
+INFO  19:16:05,061 - #18 ;
+INFO  19:16:05,061 - #12 {
+INFO  19:16:05,061 - #4 void
+INFO  19:16:05,062 - #51 main
+INFO  19:16:05,063 - #16 (
+INFO  19:16:05,064 - #17 )
+INFO  19:16:05,065 - #12 {
+INFO  19:16:05,066 - #51 intArray
+INFO  19:16:05,067 - #8 =
+INFO  19:16:05,067 - #47 new
+INFO  19:16:05,068 - #51 int
+INFO  19:16:05,068 - #14 [
+INFO  19:16:05,068 - #49 10
+INFO  19:16:05,068 - #15 ]
+INFO  19:16:05,068 - #18 ;
+INFO  19:16:05,068 - #5 print
+INFO  19:16:05,069 - #16 (
+INFO  19:16:05,069 - #48 false
+INFO  19:16:05,069 - #17 )
+INFO  19:16:05,069 - #18 ;
+INFO  19:16:05,069 - #5 print
+INFO  19:16:05,069 - #16 (
+INFO  19:16:05,072 - #49 20130010
+INFO  19:16:05,072 - #17 )
+INFO  19:16:05,072 - #18 ;
+INFO  19:16:05,072 - #5 print
+INFO  19:16:05,072 - #16 (
+INFO  19:16:05,072 - #51 eol
+INFO  19:16:05,072 - #17 )
+INFO  19:16:05,072 - #18 ;
+INFO  19:16:05,072 - #51 niz
+INFO  19:16:05,072 - #8 =
+INFO  19:16:05,072 - #47 new
+INFO  19:16:05,072 - #51 int
+INFO  19:16:05,072 - #14 [
+INFO  19:16:05,072 - #49 5
+INFO  19:16:05,072 - #15 ]
+INFO  19:16:05,072 - #18 ;
+INFO  19:16:05,072 - #51 niz
+INFO  19:16:05,072 - #14 [
+INFO  19:16:05,072 - #49 0
+INFO  19:16:05,072 - #15 ]
+INFO  19:16:05,073 - #28 ++
+INFO  19:16:05,073 - #18 ;
+INFO  19:16:05,074 - #51 niz
+INFO  19:16:05,074 - #14 [
+INFO  19:16:05,074 - #49 4
+INFO  19:16:05,074 - #15 ]
+INFO  19:16:05,074 - #29 --
+INFO  19:16:05,074 - #18 ;
+INFO  19:16:05,075 - #51 niz
+INFO  19:16:05,075 - #14 [
+INFO  19:16:05,075 - #51 niz
+INFO  19:16:05,075 - #14 [
+INFO  19:16:05,076 - #49 0
+INFO  19:16:05,076 - #15 ]
+INFO  19:16:05,076 - #15 ]
+INFO  19:16:05,076 - #28 ++
+INFO  19:16:05,076 - #18 ;
+INFO  19:16:05,076 - #51 niz
+INFO  19:16:05,076 - #14 [
+INFO  19:16:05,076 - #51 niz
+INFO  19:16:05,076 - #14 [
+INFO  19:16:05,076 - #49 0
+INFO  19:16:05,076 - #15 ]
+INFO  19:16:05,076 - #23 *
+INFO  19:16:05,077 - #49 2
+INFO  19:16:05,078 - #26 +
+INFO  19:16:05,079 - #51 niz
+INFO  19:16:05,081 - #14 [
+INFO  19:16:05,081 - #49 1
+INFO  19:16:05,081 - #15 ]
+INFO  19:16:05,081 - #15 ]
+INFO  19:16:05,081 - #28 ++
+INFO  19:16:05,081 - #18 ;
+INFO  19:16:05,081 - #5 print
+INFO  19:16:05,081 - #16 (
+INFO  19:16:05,081 - #51 niz
+INFO  19:16:05,082 - #14 [
+INFO  19:16:05,082 - #49 4
+INFO  19:16:05,082 - #15 ]
+INFO  19:16:05,082 - #17 )
+INFO  19:16:05,082 - #18 ;
+INFO  19:16:05,082 - #13 }
+INFO  19:16:05,082 - #13 }
+INFO  19:16:05,094 - Detektovana deklaracija globalne promenljive a, u liniji 2
+INFO  19:16:05,094 - Detektovana deklaracija globalne promenljive b, u liniji 2
+INFO  19:16:05,094 - Detektovana deklaracija globalne promenljive c, u liniji 2
+INFO  19:16:05,094 - Detektovana deklaracija globalne promenljive d, u liniji 2
+INFO  19:16:05,094 - Detektovana deklaracija globalne promenljive e, u liniji 2
+INFO  19:16:05,094 - Detektovana globalna deklaracija niza intArray, u liniji 2
+INFO  19:16:05,094 - Detektovana globalna deklaracija niza niz, u liniji 2
+INFO  19:16:05,094 - Detektovana globalna deklaracija niza nizTmp, u liniji 2
+INFO  19:16:05,094 - Detektovana globalna deklaracija niza nizIndex, u liniji 2
+INFO  19:16:05,097 -  Deklarisanih globalnih promenljivih ima 9
+INFO  19:16:05,097 -  Deklarisanih lokalnih promenljivih ima 0
+INFO  19:16:05,097 -  Poziva globalnih funkcija ima 0
+INFO  19:16:05,097 -  Deklarisanih simbolickih konstanti ima 0
+INFO  19:16:05,097 -  Koriscenje formalnog parametra funkcije detektovano 0 puta
+INFO  19:16:05,099 - Generating bytecode file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.obj
+INFO  19:16:05,102 - Parsiranje uspesno zavrseno!

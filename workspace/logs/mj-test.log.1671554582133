@@ -1,0 +1,25 @@
+INFO  17:42:36,231 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  17:42:36,380 - #2 program
+INFO  17:42:36,380 - #51 test301
+INFO  17:42:36,380 - #11 {
+INFO  17:42:36,383 - #4 void
+INFO  17:42:36,385 - #51 main
+INFO  17:42:36,386 - #15 (
+INFO  17:42:36,388 - #16 )
+INFO  17:42:36,388 - #51 int
+INFO  17:42:36,390 - #51 bodovi
+INFO  17:42:36,391 - #17 ;
+INFO  17:42:36,392 - #51 bool
+INFO  17:42:36,392 - #51 bt
+INFO  17:42:36,392 - #17 ;
+INFO  17:42:36,392 - #11 {
+INFO  17:42:36,392 - #51 int
+INFO  17:42:36,394 - #51 bodovi123
+ERROR 17:42:36,394 - 
+Syntax error on line 11
+INFO  17:42:36,394 - #17 ;
+INFO  17:42:36,395 - #12 }
+INFO  17:42:36,395 - #12 }
+ERROR 17:42:36,398 - Fatal error, parsing terminated. on line 16
+INFO  17:42:36,417 - Print calls = 0
+ERROR 17:42:36,418 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,142 @@
+INFO  19:02:05,261 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  19:02:05,380 - #2 program
+INFO  19:02:05,381 - #51 test00
+INFO  19:02:05,381 - #7 const
+INFO  19:02:05,383 - #51 int
+INFO  19:02:05,383 - #51 nula
+INFO  19:02:05,385 - #8 =
+INFO  19:02:05,385 - #49 0
+INFO  19:02:05,385 - #21 ,
+INFO  19:02:05,387 - #51 jedan
+INFO  19:02:05,387 - #8 =
+INFO  19:02:05,387 - #49 1
+INFO  19:02:05,387 - #18 ;
+INFO  19:02:05,387 - #51 int
+INFO  19:02:05,389 - #51 niz
+INFO  19:02:05,389 - #14 [
+INFO  19:02:05,389 - #15 ]
+INFO  19:02:05,389 - #18 ;
+INFO  19:02:05,389 - #51 int
+INFO  19:02:05,389 - #51 a
+INFO  19:02:05,389 - #21 ,
+INFO  19:02:05,389 - #51 b
+INFO  19:02:05,391 - #21 ,
+INFO  19:02:05,392 - #51 c
+INFO  19:02:05,392 - #18 ;
+INFO  19:02:05,392 - #12 {
+INFO  19:02:05,392 - #51 int
+INFO  19:02:05,393 - #51 test_metoda
+INFO  19:02:05,393 - #16 (
+INFO  19:02:05,394 - #17 )
+INFO  19:02:05,394 - #12 {
+INFO  19:02:05,395 - #51 niz
+INFO  19:02:05,396 - #8 =
+INFO  19:02:05,397 - #47 new
+INFO  19:02:05,398 - #51 int
+INFO  19:02:05,398 - #14 [
+INFO  19:02:05,398 - #49 3
+INFO  19:02:05,398 - #15 ]
+INFO  19:02:05,398 - #18 ;
+INFO  19:02:05,399 - #51 niz
+INFO  19:02:05,399 - #14 [
+INFO  19:02:05,399 - #51 nula
+INFO  19:02:05,399 - #15 ]
+INFO  19:02:05,399 - #8 =
+INFO  19:02:05,399 - #49 15
+INFO  19:02:05,399 - #18 ;
+INFO  19:02:05,399 - #51 niz
+INFO  19:02:05,399 - #14 [
+INFO  19:02:05,399 - #49 1
+INFO  19:02:05,399 - #15 ]
+INFO  19:02:05,400 - #8 =
+INFO  19:02:05,400 - #49 30
+INFO  19:02:05,400 - #18 ;
+INFO  19:02:05,400 - #51 niz
+INFO  19:02:05,400 - #14 [
+INFO  19:02:05,400 - #51 niz
+INFO  19:02:05,400 - #14 [
+INFO  19:02:05,400 - #51 jedan
+INFO  19:02:05,400 - #15 ]
+INFO  19:02:05,400 - #15 ]
+INFO  19:02:05,400 - #8 =
+INFO  19:02:05,400 - #51 niz
+INFO  19:02:05,401 - #14 [
+INFO  19:02:05,401 - #49 1
+INFO  19:02:05,401 - #15 ]
+INFO  19:02:05,401 - #24 /
+INFO  19:02:05,401 - #51 niz
+INFO  19:02:05,403 - #14 [
+INFO  19:02:05,403 - #49 0
+INFO  19:02:05,403 - #15 ]
+INFO  19:02:05,403 - #18 ;
+INFO  19:02:05,404 - #5 print
+INFO  19:02:05,404 - #16 (
+INFO  19:02:05,404 - #51 niz
+INFO  19:02:05,404 - #14 [
+INFO  19:02:05,404 - #49 0
+INFO  19:02:05,404 - #15 ]
+INFO  19:02:05,404 - #17 )
+INFO  19:02:05,404 - #18 ;
+INFO  19:02:05,404 - #5 print
+INFO  19:02:05,404 - #16 (
+INFO  19:02:05,404 - #51 niz
+INFO  19:02:05,404 - #14 [
+INFO  19:02:05,404 - #49 1
+INFO  19:02:05,404 - #15 ]
+INFO  19:02:05,404 - #17 )
+INFO  19:02:05,404 - #18 ;
+INFO  19:02:05,405 - #5 print
+INFO  19:02:05,405 - #16 (
+INFO  19:02:05,405 - #51 niz
+INFO  19:02:05,405 - #14 [
+INFO  19:02:05,405 - #49 2
+INFO  19:02:05,405 - #15 ]
+INFO  19:02:05,405 - #17 )
+INFO  19:02:05,405 - #18 ;
+INFO  19:02:05,405 - #14 [
+INFO  19:02:05,405 - #51 a
+INFO  19:02:05,405 - #21 ,
+INFO  19:02:05,405 - #51 b
+INFO  19:02:05,407 - #21 ,
+INFO  19:02:05,407 - #51 c
+INFO  19:02:05,407 - #15 ]
+INFO  19:02:05,407 - #8 =
+INFO  19:02:05,407 - #51 niz
+INFO  19:02:05,407 - #18 ;
+INFO  19:02:05,407 - #3 return
+INFO  19:02:05,407 - #51 c
+INFO  19:02:05,407 - #18 ;
+INFO  19:02:05,408 - #13 }
+INFO  19:02:05,408 - #4 void
+INFO  19:02:05,408 - #51 main
+INFO  19:02:05,410 - #16 (
+INFO  19:02:05,410 - #17 )
+INFO  19:02:05,411 - #51 int
+INFO  19:02:05,411 - #51 d
+INFO  19:02:05,413 - #18 ;
+INFO  19:02:05,413 - #51 bool
+INFO  19:02:05,414 - #51 bt
+INFO  19:02:05,414 - #18 ;
+INFO  19:02:05,414 - #12 {
+INFO  19:02:05,414 - #5 print
+INFO  19:02:05,414 - #16 (
+INFO  19:02:05,414 - #51 d
+INFO  19:02:05,414 - #17 )
+INFO  19:02:05,414 - #18 ;
+INFO  19:02:05,414 - #13 }
+INFO  19:02:05,414 - #13 }
+INFO  19:02:05,429 - Detektovana deklaracija konstante nula sa vrednoscu 0, u liniji 5
+INFO  19:02:05,429 - Detektovana deklaracija konstante jedan sa vrednoscu 1, u liniji 5
+INFO  19:02:05,430 - Detektovana globalna deklaracija niza niz, u liniji 7
+INFO  19:02:05,430 - Detektovana deklaracija globalne promenljive a, u liniji 8
+INFO  19:02:05,430 - Detektovana deklaracija globalne promenljive b, u liniji 8
+INFO  19:02:05,430 - Detektovana deklaracija globalne promenljive c, u liniji 8
+INFO  19:02:05,435 - Detektovana deklaracija lokalne promenljive d, u liniji 26
+INFO  19:02:05,435 - Detektovana deklaracija lokalne promenljive bt, u liniji 27
+INFO  19:02:05,436 -  Deklarisanih globalnih promenljivih ima 4
+INFO  19:02:05,436 -  Deklarisanih lokalnih promenljivih ima 2
+INFO  19:02:05,436 -  Poziva globalnih funkcija ima 0
+INFO  19:02:05,436 -  Deklarisanih simbolickih konstanti ima 2
+INFO  19:02:05,436 -  Koriscenje formalnog parametra funkcije detektovano 0 puta
+INFO  19:02:05,438 - Generating bytecode file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.obj
+INFO  19:02:05,443 - Parsiranje uspesno zavrseno!

@@ -1,0 +1,73 @@
+INFO  19:11:19,674 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  19:11:19,807 - #2 program
+INFO  19:11:19,807 - #50 test301
+INFO  19:11:19,808 - #7 const
+INFO  19:11:19,812 - #50 int
+INFO  19:11:19,812 - #50 nula
+INFO  19:11:19,813 - #8 =
+INFO  19:11:19,813 - #48 0
+INFO  19:11:19,814 - #17 ;
+INFO  19:11:19,817 - #7 const
+INFO  19:11:19,818 - #50 int
+INFO  19:11:19,818 - #50 jedan
+INFO  19:11:19,818 - #8 =
+INFO  19:11:19,818 - #48 1
+INFO  19:11:19,818 - #17 ;
+INFO  19:11:19,819 - #7 const
+INFO  19:11:19,819 - #50 int
+INFO  19:11:19,819 - #50 pet
+INFO  19:11:19,819 - #8 =
+INFO  19:11:19,819 - #48 5
+INFO  19:11:19,819 - #17 ;
+INFO  19:11:19,819 - #50 int
+INFO  19:11:19,819 - #50 niz
+INFO  19:11:19,819 - #13 [
+INFO  19:11:19,819 - #14 ]
+INFO  19:11:19,819 - #20 ,
+INFO  19:11:19,819 - #50 niz2
+INFO  19:11:19,820 - #13 [
+INFO  19:11:19,820 - #14 ]
+INFO  19:11:19,820 - #20 ,
+INFO  19:11:19,820 - #50 a
+INFO  19:11:19,820 - #20 ,
+INFO  19:11:19,820 - #50 b
+INFO  19:11:19,820 - #17 ;
+INFO  19:11:19,820 - #50 char
+INFO  19:11:19,820 - #50 nizch
+INFO  19:11:19,820 - #13 [
+INFO  19:11:19,820 - #14 ]
+INFO  19:11:19,820 - #17 ;
+INFO  19:11:19,820 - #11 {
+INFO  19:11:19,820 - #4 void
+INFO  19:11:19,822 - #50 main
+INFO  19:11:19,823 - #15 (
+INFO  19:11:19,825 - #16 )
+INFO  19:11:19,825 - #50 int
+INFO  19:11:19,826 - #50 bodovi
+INFO  19:11:19,827 - #17 ;
+INFO  19:11:19,827 - #50 bool
+INFO  19:11:19,827 - #50 bt
+INFO  19:11:19,827 - #17 ;
+INFO  19:11:19,827 - #11 {
+INFO  19:11:19,829 - #50 bodovi
+INFO  19:11:19,830 - #8 =
+INFO  19:11:19,830 - #48 0
+INFO  19:11:19,831 - #17 ;
+INFO  19:11:19,832 - #5 print
+INFO  19:11:19,832 - #15 (
+INFO  19:11:19,832 - #50 bodovi
+INFO  19:11:19,832 - #16 )
+INFO  19:11:19,832 - #17 ;
+INFO  19:11:19,832 - #12 }
+INFO  19:11:19,833 - #12 }
+INFO  19:11:19,846 - Detected global array declaration niz in line 9
+INFO  19:11:19,846 - Detected global array declaration niz2 in line 9
+INFO  19:11:19,846 - Detected global variable declaration a in line 9
+INFO  19:11:19,846 - Detected global variable declaration b in line 9
+INFO  19:11:19,846 - Detected global array declaration nizch in line 10
+INFO  19:11:19,846 - Detected method main in line 13
+INFO  19:11:19,847 - Detected local variable declaration bodovi in line 14
+INFO  19:11:19,847 - Detected local variable declaration bt in line 15
+INFO  19:11:19,847 - Print calls = 0
+INFO  19:11:19,847 - Generating bytecode file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.obj
+INFO  19:11:19,852 - Parsiranje uspesno zavrseno!

@@ -1,0 +1,58 @@
+INFO  18:36:42,277 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  18:36:42,464 - #2 program
+INFO  18:36:42,464 - #51 test301
+INFO  18:36:42,464 - #51 int
+INFO  18:36:42,467 - #51 niz
+INFO  18:36:42,469 - #13 [
+INFO  18:36:42,469 - #14 ]
+INFO  18:36:42,469 - #20 ,
+INFO  18:36:42,470 - #51 niz2
+INFO  18:36:42,470 - #13 [
+INFO  18:36:42,470 - #14 ]
+INFO  18:36:42,470 - #20 ,
+INFO  18:36:42,471 - #51 a
+INFO  18:36:42,471 - #20 ,
+INFO  18:36:42,471 - #51 b
+INFO  18:36:42,472 - #17 ;
+INFO  18:36:42,472 - #51 char
+INFO  18:36:42,472 - #51 nizch
+INFO  18:36:42,472 - #13 [
+INFO  18:36:42,473 - #14 ]
+INFO  18:36:42,473 - #17 ;
+INFO  18:36:42,473 - #7 const
+INFO  18:36:42,475 - #51 int
+INFO  18:36:42,476 - #51 jedan
+INFO  18:36:42,476 - #29 =
+ERROR 18:36:42,476 - 
+Syntax error on line 9
+INFO  18:36:42,476 - #49 1
+INFO  18:36:42,476 - #17 ;
+INFO  18:36:42,476 - #7 const
+INFO  18:36:42,477 - #51 int
+INFO  18:36:42,478 - #51 dvatri
+ERROR 18:36:42,478 - Syntax error in global variable declaration. Recovery until SEMI on line 8
+INFO  18:36:42,482 - #29 =
+ERROR 18:36:42,482 - 
+Syntax error on line 10
+INFO  18:36:42,482 - #49 2
+INFO  18:36:42,482 - #20 ,
+INFO  18:36:42,483 - #11 {
+INFO  18:36:42,483 - #4 void
+INFO  18:36:42,483 - #51 main
+INFO  18:36:42,483 - #15 (
+INFO  18:36:42,483 - #16 )
+INFO  18:36:42,483 - #51 int
+INFO  18:36:42,483 - #51 bodovi
+INFO  18:36:42,483 - #17 ;
+INFO  18:36:42,483 - #51 bool
+INFO  18:36:42,483 - #51 bt
+INFO  18:36:42,484 - #17 ;
+ERROR 18:36:42,484 - Syntax error in global variable declaration. Recovery until SEMI on line 8
+INFO  18:36:42,484 - #11 {
+INFO  18:36:42,484 - #12 }
+INFO  18:36:42,485 - #12 }
+ERROR 18:36:42,490 - 
+Syntax error on line 21
+ERROR 18:36:42,490 - Fatal error, parsing terminated. on line 24
+INFO  18:36:42,510 - Print calls = 0
+ERROR 18:36:42,511 - Parsiranje NIJE uspesno zavrseno!

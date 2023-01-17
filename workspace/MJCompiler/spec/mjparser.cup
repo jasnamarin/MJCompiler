@@ -28,25 +28,25 @@ parser code {:
     }
 
     public void syntax_error(Symbol cur_token) {
-        report_error("\nSyntax error", cur_token);
+        report_error("\nSintaksna greska", cur_token);
     }
 
     public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
-        report_fatal_error("Fatal error, parsing terminated.", cur_token);
+        report_fatal_error("Fatalna greska, parsiranje prekinuto.", cur_token);
     }
 
     public void report_error(String message, Object info) {
     	errorDetected = true;
     	StringBuilder msg = new StringBuilder(message);
     	if (info instanceof Symbol)
-            msg.append (" on line ").append(((Symbol)info).left);
+            msg.append (" u liniji ").append(((Symbol)info).left);
         log.error(msg.toString());
     }
 
     public void report_info(String message, Object info) {
     	StringBuilder msg = new StringBuilder(message);
     	if (info instanceof Symbol)
-            msg.append (" on line ").append(((Symbol)info).left);
+            msg.append (" u liniji ").append(((Symbol)info).left);
         log.info(msg.toString());
     }
 
@@ -86,7 +86,8 @@ nonterminal VarList, Var, VarDeclList;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj MethodTypeName; // object - name
 nonterminal MethodDecl, ReturnType, FormPars;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type; // struct - any type
-nonterminal Statement, StatementList, PrintVal, DesignatorStatement, DesigOp, DesigList, ActPars, While, ForEach;
+nonterminal Statement, StatementList, PrintVal, DesignatorStatement, DesigOp, DesigList, ActPars;
+nonterminal While, ForEach, Comma;
 nonterminal Condition, CondTerm, CondFact;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr, Term, Factor; // struct - holding type
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator; // object - name
@@ -301,9 +302,12 @@ DesigList ::= (EmptyDesigList) /* epsilon */
             |
             (SingleDesig) Designator
             |
-            (DesigListComma) DesigList COMMA
+            (DesigListComma) DesigList Comma
             |
-            (DesigListLong) DesigList COMMA Designator
+            (DesigListLong) DesigList Comma Designator
+;
+
+Comma ::= (Comma) COMMA
 ;
 
 ActPars ::= (ActParams) ActPars COMMA Expr

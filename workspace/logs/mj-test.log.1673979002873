@@ -1,0 +1,59 @@
+INFO  19:02:35,539 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  19:02:35,633 - #2 program
+INFO  19:02:35,633 - #51 test00
+INFO  19:02:35,633 - #7 const
+INFO  19:02:35,635 - #51 int
+INFO  19:02:35,635 - #51 nula
+INFO  19:02:35,636 - #8 =
+INFO  19:02:35,636 - #49 0
+INFO  19:02:35,636 - #21 ,
+INFO  19:02:35,639 - #51 jedan
+INFO  19:02:35,639 - #8 =
+INFO  19:02:35,639 - #49 1
+INFO  19:02:35,639 - #18 ;
+INFO  19:02:35,639 - #51 int
+INFO  19:02:35,640 - #51 niz
+INFO  19:02:35,640 - #14 [
+INFO  19:02:35,641 - #15 ]
+INFO  19:02:35,641 - #18 ;
+INFO  19:02:35,641 - #51 int
+INFO  19:02:35,641 - #51 a
+INFO  19:02:35,641 - #21 ,
+INFO  19:02:35,641 - #51 b
+INFO  19:02:35,642 - #21 ,
+INFO  19:02:35,643 - #51 c
+INFO  19:02:35,643 - #18 ;
+INFO  19:02:35,643 - #12 {
+INFO  19:02:35,643 - #4 void
+INFO  19:02:35,644 - #51 main
+INFO  19:02:35,645 - #16 (
+INFO  19:02:35,645 - #17 )
+INFO  19:02:35,646 - #51 int
+INFO  19:02:35,647 - #51 d
+INFO  19:02:35,647 - #18 ;
+INFO  19:02:35,647 - #51 bool
+INFO  19:02:35,647 - #51 bt
+INFO  19:02:35,647 - #18 ;
+INFO  19:02:35,647 - #12 {
+INFO  19:02:35,647 - #5 print
+INFO  19:02:35,648 - #16 (
+INFO  19:02:35,648 - #51 d
+INFO  19:02:35,648 - #17 )
+INFO  19:02:35,648 - #18 ;
+INFO  19:02:35,648 - #13 }
+INFO  19:02:35,649 - #13 }
+INFO  19:02:35,660 - Detektovana deklaracija konstante nula sa vrednoscu 0, u liniji 5
+INFO  19:02:35,660 - Detektovana deklaracija konstante jedan sa vrednoscu 1, u liniji 5
+INFO  19:02:35,660 - Detektovana globalna deklaracija niza niz, u liniji 7
+INFO  19:02:35,660 - Detektovana deklaracija globalne promenljive a, u liniji 8
+INFO  19:02:35,660 - Detektovana deklaracija globalne promenljive b, u liniji 8
+INFO  19:02:35,660 - Detektovana deklaracija globalne promenljive c, u liniji 8
+INFO  19:02:35,663 - Detektovana deklaracija lokalne promenljive d, u liniji 12
+INFO  19:02:35,663 - Detektovana deklaracija lokalne promenljive bt, u liniji 13
+INFO  19:02:35,663 -  Deklarisanih globalnih promenljivih ima 4
+INFO  19:02:35,664 -  Deklarisanih lokalnih promenljivih ima 2
+INFO  19:02:35,665 -  Poziva globalnih funkcija ima 0
+INFO  19:02:35,665 -  Deklarisanih simbolickih konstanti ima 2
+INFO  19:02:35,665 -  Koriscenje formalnog parametra funkcije detektovano 0 puta
+INFO  19:02:35,667 - Generating bytecode file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.obj
+INFO  19:02:35,668 - Parsiranje uspesno zavrseno!

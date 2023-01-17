@@ -28,25 +28,25 @@ parser code {:
     }
 
     public void syntax_error(Symbol cur_token) {
-        report_error("\nSyntax error", cur_token);
+        report_error("\nSintaksna greska", cur_token);
     }
 
     public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
-        report_fatal_error("Fatal error, parsing terminated.", cur_token);
+        report_fatal_error("Fatalna greska, parsiranje prekinuto.", cur_token);
     }
 
     public void report_error(String message, Object info) {
     	errorDetected = true;
     	StringBuilder msg = new StringBuilder(message);
     	if (info instanceof Symbol)
-            msg.append (" on line ").append(((Symbol)info).left);
+            msg.append (" u liniji ").append(((Symbol)info).left);
         log.error(msg.toString());
     }
 
     public void report_info(String message, Object info) {
     	StringBuilder msg = new StringBuilder(message);
     	if (info instanceof Symbol)
-            msg.append (" on line ").append(((Symbol)info).left);
+            msg.append (" u liniji ").append(((Symbol)info).left);
         log.info(msg.toString());
     }
 
@@ -106,6 +106,7 @@ nonterminal DesigList DesigList;
 nonterminal ActPars ActPars;
 nonterminal While While;
 nonterminal ForEach ForEach;
+nonterminal Comma Comma;
 nonterminal Condition Condition;
 nonterminal CondTerm CondTerm;
 nonterminal CondFact CondFact;
@@ -325,9 +326,12 @@ DesigList ::= (EmptyDesigList) {: RESULT=new EmptyDesigList(); :} /* epsilon */
             |
             (SingleDesig) Designator:D1 {: RESULT=new SingleDesig(D1); RESULT.setLine(D1left); :}
             |
-            (DesigListComma) DesigList:D1 COMMA {: RESULT=new DesigListComma(D1); RESULT.setLine(D1left); :}
+            (DesigListComma) DesigList:D1 Comma:C2 {: RESULT=new DesigListComma(D1, C2); RESULT.setLine(D1left); :}
             |
-            (DesigListLong) DesigList:D1 COMMA Designator:D2 {: RESULT=new DesigListLong(D1, D2); RESULT.setLine(D1left); :}
+            (DesigListLong) DesigList:D1 Comma:C2 Designator:D3 {: RESULT=new DesigListLong(D1, C2, D3); RESULT.setLine(D1left); :}
+;
+
+Comma ::= (Comma) COMMA {: RESULT=new Comma(); :}
 ;
 
 ActPars ::= (ActParams) ActPars:A1 COMMA Expr:E2 {: RESULT=new ActParams(A1, E2); RESULT.setLine(A1left); :}

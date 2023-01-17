@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="mj-runtime">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../../Dev/mj-runtime.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../../Dev/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../../Dev/cup_v10k.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../../Dev/JFlex.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../../Dev/mj-runtime.jar!/" />
+    </SOURCES>
+  </library>
+</component>

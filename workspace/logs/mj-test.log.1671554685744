@@ -1,0 +1,72 @@
+INFO  17:44:25,155 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  17:44:25,308 - #2 program
+INFO  17:44:25,308 - #51 test301
+INFO  17:44:25,309 - #7 const
+INFO  17:44:25,311 - #51 int
+INFO  17:44:25,312 - #51 nula
+INFO  17:44:25,313 - #29 =
+ERROR 17:44:25,313 - 
+Syntax error on line 6
+INFO  17:44:25,314 - #49 0
+INFO  17:44:25,314 - #17 ;
+INFO  17:44:25,314 - #7 const
+INFO  17:44:25,315 - #51 int
+INFO  17:44:25,316 - #51 jedan
+ERROR 17:44:25,316 - Syntax error in global variable declaration. Recovery until SEMI on line 8
+INFO  17:44:25,321 - #29 =
+ERROR 17:44:25,321 - 
+Syntax error on line 7
+INFO  17:44:25,322 - #49 1
+INFO  17:44:25,322 - #17 ;
+INFO  17:44:25,324 - #7 const
+INFO  17:44:25,324 - #51 int
+INFO  17:44:25,324 - #51 pet
+ERROR 17:44:25,324 - Syntax error in global variable declaration. Recovery until SEMI on line 8
+INFO  17:44:25,324 - #29 =
+ERROR 17:44:25,324 - 
+Syntax error on line 8
+INFO  17:44:25,324 - #49 5
+INFO  17:44:25,324 - #17 ;
+INFO  17:44:25,325 - #51 int
+INFO  17:44:25,325 - #51 niz
+INFO  17:44:25,325 - #13 [
+ERROR 17:44:25,325 - Syntax error in global variable declaration. Recovery until SEMI on line 8
+INFO  17:44:25,325 - #14 ]
+INFO  17:44:25,325 - #20 ,
+INFO  17:44:25,326 - #51 niz2
+INFO  17:44:25,326 - #13 [
+INFO  17:44:25,326 - #14 ]
+INFO  17:44:25,326 - #20 ,
+INFO  17:44:25,326 - #51 a
+INFO  17:44:25,326 - #20 ,
+INFO  17:44:25,327 - #51 b
+INFO  17:44:25,327 - #17 ;
+INFO  17:44:25,327 - #51 char
+INFO  17:44:25,327 - #51 nizch
+INFO  17:44:25,327 - #13 [
+INFO  17:44:25,327 - #14 ]
+INFO  17:44:25,327 - #17 ;
+INFO  17:44:25,328 - #11 {
+INFO  17:44:25,328 - #4 void
+INFO  17:44:25,330 - #51 main
+INFO  17:44:25,332 - #15 (
+INFO  17:44:25,334 - #16 )
+INFO  17:44:25,334 - #51 int
+INFO  17:44:25,341 - #51 bodovi
+INFO  17:44:25,341 - #17 ;
+INFO  17:44:25,341 - #51 bool
+INFO  17:44:25,342 - #51 bt
+INFO  17:44:25,342 - #17 ;
+INFO  17:44:25,342 - #11 {
+INFO  17:44:25,342 - #12 }
+INFO  17:44:25,343 - #12 }
+INFO  17:44:25,368 - Detected global array declaration niz in line 10
+INFO  17:44:25,368 - Detected global array declaration niz2 in line 10
+INFO  17:44:25,369 - Detected global variable declaration a in line 10
+INFO  17:44:25,369 - Detected global variable declaration b in line 10
+INFO  17:44:25,369 - Detected global array declaration nizch in line 11
+INFO  17:44:25,369 - Detected method main in line 14
+INFO  17:44:25,370 - Detected local variable declaration bodovi in line 15
+INFO  17:44:25,370 - Detected local variable declaration bt in line 16
+INFO  17:44:25,370 - Print calls = 0
+ERROR 17:44:25,372 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,15 @@
+INFO  17:40:11,191 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  17:40:11,379 - #2 program
+INFO  17:40:11,379 - #51 test301
+INFO  17:40:11,380 - #11 {
+INFO  17:40:11,384 - #4 void
+INFO  17:40:11,385 - #51 main
+INFO  17:40:11,387 - #15 (
+INFO  17:40:11,389 - #16 )
+INFO  17:40:11,389 - #11 {
+INFO  17:40:11,392 - #12 }
+INFO  17:40:11,394 - #12 }
+INFO  17:40:11,422 - Detected method main in line 7
+INFO  17:40:11,422 - Print calls = 0
+INFO  17:40:11,424 - Generating bytecode file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.obj
+INFO  17:40:11,432 - Parsiranje uspesno zavrseno!

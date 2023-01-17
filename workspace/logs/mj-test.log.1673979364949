@@ -1,0 +1,192 @@
+INFO  19:15:29,609 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  19:15:29,743 - #2 program
+INFO  19:15:29,743 - #51 test_A_successful
+INFO  19:15:29,743 - #51 int
+INFO  19:15:29,746 - #51 a
+INFO  19:15:29,748 - #21 ,
+INFO  19:15:29,748 - #51 b
+INFO  19:15:29,748 - #21 ,
+INFO  19:15:29,749 - #51 c
+INFO  19:15:29,749 - #21 ,
+INFO  19:15:29,749 - #51 d
+INFO  19:15:29,749 - #21 ,
+INFO  19:15:29,749 - #51 e
+INFO  19:15:29,749 - #21 ,
+INFO  19:15:29,749 - #51 intArray
+INFO  19:15:29,749 - #14 [
+INFO  19:15:29,749 - #15 ]
+INFO  19:15:29,749 - #21 ,
+INFO  19:15:29,749 - #51 niz
+INFO  19:15:29,750 - #14 [
+INFO  19:15:29,750 - #15 ]
+INFO  19:15:29,752 - #21 ,
+INFO  19:15:29,752 - #51 nizTmp
+INFO  19:15:29,752 - #14 [
+INFO  19:15:29,752 - #15 ]
+INFO  19:15:29,752 - #21 ,
+INFO  19:15:29,752 - #51 nizIndex
+INFO  19:15:29,752 - #14 [
+INFO  19:15:29,752 - #15 ]
+INFO  19:15:29,752 - #18 ;
+INFO  19:15:29,752 - #12 {
+INFO  19:15:29,753 - #4 void
+INFO  19:15:29,754 - #51 main
+INFO  19:15:29,755 - #16 (
+INFO  19:15:29,756 - #17 )
+INFO  19:15:29,757 - #12 {
+INFO  19:15:29,757 - #5 print
+INFO  19:15:29,758 - #16 (
+INFO  19:15:29,758 - #50 t
+INFO  19:15:29,758 - #17 )
+INFO  19:15:29,759 - #18 ;
+INFO  19:15:29,759 - #5 print
+INFO  19:15:29,759 - #16 (
+INFO  19:15:29,759 - #50 e
+INFO  19:15:29,759 - #17 )
+INFO  19:15:29,759 - #18 ;
+INFO  19:15:29,759 - #5 print
+INFO  19:15:29,759 - #16 (
+INFO  19:15:29,759 - #50 s
+INFO  19:15:29,760 - #17 )
+INFO  19:15:29,760 - #18 ;
+INFO  19:15:29,762 - #5 print
+INFO  19:15:29,762 - #16 (
+INFO  19:15:29,762 - #50 t
+INFO  19:15:29,762 - #17 )
+INFO  19:15:29,762 - #18 ;
+INFO  19:15:29,762 - #5 print
+INFO  19:15:29,763 - #16 (
+INFO  19:15:29,763 - #50  
+INFO  19:15:29,763 - #17 )
+INFO  19:15:29,763 - #18 ;
+INFO  19:15:29,763 - #5 print
+INFO  19:15:29,763 - #16 (
+INFO  19:15:29,763 - #50 i
+INFO  19:15:29,763 - #17 )
+INFO  19:15:29,763 - #18 ;
+INFO  19:15:29,763 - #5 print
+INFO  19:15:29,763 - #16 (
+INFO  19:15:29,763 - #50 /
+INFO  19:15:29,763 - #17 )
+INFO  19:15:29,763 - #18 ;
+INFO  19:15:29,763 - #5 print
+INFO  19:15:29,764 - #16 (
+INFO  19:15:29,764 - #50 o
+INFO  19:15:29,764 - #17 )
+INFO  19:15:29,764 - #18 ;
+INFO  19:15:29,764 - #5 print
+INFO  19:15:29,764 - #16 (
+INFO  19:15:29,764 - #51 eol
+INFO  19:15:29,764 - #17 )
+INFO  19:15:29,764 - #18 ;
+INFO  19:15:29,764 - #6 read
+INFO  19:15:29,764 - #16 (
+INFO  19:15:29,764 - #51 a
+INFO  19:15:29,764 - #17 )
+INFO  19:15:29,764 - #18 ;
+INFO  19:15:29,764 - #5 print
+INFO  19:15:29,765 - #16 (
+INFO  19:15:29,765 - #51 a
+INFO  19:15:29,765 - #21 ,
+INFO  19:15:29,765 - #49 3
+INFO  19:15:29,765 - #17 )
+INFO  19:15:29,765 - #18 ;
+INFO  19:15:29,765 - #51 intArray
+INFO  19:15:29,765 - #8 =
+INFO  19:15:29,765 - #47 new
+INFO  19:15:29,767 - #51 int
+INFO  19:15:29,767 - #14 [
+INFO  19:15:29,767 - #49 10
+INFO  19:15:29,767 - #15 ]
+INFO  19:15:29,767 - #18 ;
+INFO  19:15:29,768 - #5 print
+INFO  19:15:29,768 - #16 (
+INFO  19:15:29,768 - #48 false
+INFO  19:15:29,768 - #17 )
+INFO  19:15:29,768 - #18 ;
+INFO  19:15:29,769 - #5 print
+INFO  19:15:29,769 - #16 (
+INFO  19:15:29,769 - #49 20130010
+INFO  19:15:29,769 - #17 )
+INFO  19:15:29,769 - #18 ;
+INFO  19:15:29,769 - #5 print
+INFO  19:15:29,769 - #16 (
+INFO  19:15:29,769 - #51 eol
+INFO  19:15:29,769 - #17 )
+INFO  19:15:29,769 - #18 ;
+INFO  19:15:29,769 - #51 niz
+INFO  19:15:29,769 - #8 =
+INFO  19:15:29,769 - #47 new
+INFO  19:15:29,769 - #51 int
+INFO  19:15:29,770 - #14 [
+INFO  19:15:29,770 - #49 5
+INFO  19:15:29,770 - #15 ]
+INFO  19:15:29,770 - #18 ;
+INFO  19:15:29,770 - #51 niz
+INFO  19:15:29,770 - #14 [
+INFO  19:15:29,770 - #49 0
+INFO  19:15:29,770 - #15 ]
+INFO  19:15:29,770 - #28 ++
+INFO  19:15:29,770 - #18 ;
+INFO  19:15:29,772 - #51 niz
+INFO  19:15:29,772 - #14 [
+INFO  19:15:29,772 - #49 4
+INFO  19:15:29,772 - #15 ]
+INFO  19:15:29,772 - #29 --
+INFO  19:15:29,772 - #18 ;
+INFO  19:15:29,773 - #51 niz
+INFO  19:15:29,773 - #14 [
+INFO  19:15:29,773 - #51 niz
+INFO  19:15:29,773 - #14 [
+INFO  19:15:29,773 - #49 0
+INFO  19:15:29,773 - #15 ]
+INFO  19:15:29,773 - #15 ]
+INFO  19:15:29,773 - #28 ++
+INFO  19:15:29,773 - #18 ;
+INFO  19:15:29,773 - #51 niz
+INFO  19:15:29,773 - #14 [
+INFO  19:15:29,773 - #51 niz
+INFO  19:15:29,773 - #14 [
+INFO  19:15:29,773 - #49 0
+INFO  19:15:29,774 - #15 ]
+INFO  19:15:29,774 - #23 *
+INFO  19:15:29,774 - #49 2
+INFO  19:15:29,776 - #26 +
+INFO  19:15:29,776 - #51 niz
+INFO  19:15:29,778 - #14 [
+INFO  19:15:29,778 - #49 1
+INFO  19:15:29,778 - #15 ]
+INFO  19:15:29,778 - #15 ]
+INFO  19:15:29,778 - #28 ++
+INFO  19:15:29,778 - #18 ;
+INFO  19:15:29,778 - #5 print
+INFO  19:15:29,778 - #16 (
+INFO  19:15:29,779 - #51 niz
+INFO  19:15:29,779 - #14 [
+INFO  19:15:29,779 - #49 4
+INFO  19:15:29,779 - #15 ]
+INFO  19:15:29,779 - #17 )
+INFO  19:15:29,779 - #18 ;
+INFO  19:15:29,779 - #5 print
+INFO  19:15:29,779 - #16 (
+INFO  19:15:29,779 - #51 eol
+INFO  19:15:29,779 - #17 )
+INFO  19:15:29,779 - #18 ;
+INFO  19:15:29,779 - #13 }
+INFO  19:15:29,779 - #13 }
+INFO  19:15:29,793 - Detektovana deklaracija globalne promenljive a, u liniji 2
+INFO  19:15:29,793 - Detektovana deklaracija globalne promenljive b, u liniji 2
+INFO  19:15:29,793 - Detektovana deklaracija globalne promenljive c, u liniji 2
+INFO  19:15:29,793 - Detektovana deklaracija globalne promenljive d, u liniji 2
+INFO  19:15:29,793 - Detektovana deklaracija globalne promenljive e, u liniji 2
+INFO  19:15:29,794 - Detektovana globalna deklaracija niza intArray, u liniji 2
+INFO  19:15:29,794 - Detektovana globalna deklaracija niza niz, u liniji 2
+INFO  19:15:29,794 - Detektovana globalna deklaracija niza nizTmp, u liniji 2
+INFO  19:15:29,794 - Detektovana globalna deklaracija niza nizIndex, u liniji 2
+INFO  19:15:29,796 -  Deklarisanih globalnih promenljivih ima 9
+INFO  19:15:29,796 -  Deklarisanih lokalnih promenljivih ima 0
+INFO  19:15:29,796 -  Poziva globalnih funkcija ima 0
+INFO  19:15:29,797 -  Deklarisanih simbolickih konstanti ima 0
+INFO  19:15:29,797 -  Koriscenje formalnog parametra funkcije detektovano 0 puta
+INFO  19:15:29,799 - Generating bytecode file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.obj
+INFO  19:15:29,801 - Parsiranje uspesno zavrseno!

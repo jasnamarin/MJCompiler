@@ -1,0 +1,78 @@
+INFO  19:07:54,384 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  19:07:54,450 - #2 program
+INFO  19:07:54,451 - #50 test301
+INFO  19:07:54,451 - #7 const
+INFO  19:07:54,452 - #50 int
+INFO  19:07:54,452 - #50 nula
+INFO  19:07:54,453 - #8 =
+INFO  19:07:54,453 - #48 0
+INFO  19:07:54,453 - #17 ;
+INFO  19:07:54,455 - #7 const
+INFO  19:07:54,456 - #50 int
+INFO  19:07:54,456 - #50 jedan
+INFO  19:07:54,456 - #8 =
+INFO  19:07:54,456 - #48 1
+INFO  19:07:54,456 - #17 ;
+INFO  19:07:54,456 - #7 const
+INFO  19:07:54,456 - #50 int
+INFO  19:07:54,456 - #50 pet
+INFO  19:07:54,456 - #8 =
+INFO  19:07:54,456 - #48 5
+INFO  19:07:54,457 - #17 ;
+INFO  19:07:54,457 - #50 int
+INFO  19:07:54,457 - #50 niz
+INFO  19:07:54,457 - #13 [
+INFO  19:07:54,457 - #14 ]
+INFO  19:07:54,457 - #20 ,
+INFO  19:07:54,457 - #50 niz2
+INFO  19:07:54,457 - #13 [
+INFO  19:07:54,457 - #14 ]
+INFO  19:07:54,457 - #20 ,
+INFO  19:07:54,458 - #50 a
+INFO  19:07:54,458 - #20 ,
+INFO  19:07:54,458 - #50 b
+INFO  19:07:54,458 - #17 ;
+INFO  19:07:54,458 - #50 char
+INFO  19:07:54,458 - #50 nizch
+INFO  19:07:54,458 - #13 [
+INFO  19:07:54,458 - #14 ]
+INFO  19:07:54,458 - #17 ;
+INFO  19:07:54,458 - #11 {
+INFO  19:07:54,458 - #4 void
+INFO  19:07:54,459 - #50 main
+INFO  19:07:54,460 - #15 (
+INFO  19:07:54,460 - #16 )
+INFO  19:07:54,461 - #50 int
+INFO  19:07:54,461 - #50 bodovi
+INFO  19:07:54,461 - #17 ;
+INFO  19:07:54,461 - #50 bool
+INFO  19:07:54,462 - #50 bt
+INFO  19:07:54,462 - #17 ;
+INFO  19:07:54,462 - #11 {
+INFO  19:07:54,463 - #5 print
+INFO  19:07:54,464 - #15 (
+INFO  19:07:54,464 - #50 niz
+INFO  19:07:54,464 - #16 )
+INFO  19:07:54,465 - #17 ;
+INFO  19:07:54,465 - #40 while
+INFO  19:07:54,465 - #15 (
+INFO  19:07:54,465 - #48 1
+INFO  19:07:54,465 - #16 )
+INFO  19:07:54,465 - #41 break
+INFO  19:07:54,465 - #17 ;
+INFO  19:07:54,466 - #3 return
+INFO  19:07:54,466 - #48 1
+INFO  19:07:54,466 - #17 ;
+INFO  19:07:54,466 - #12 }
+INFO  19:07:54,467 - #12 }
+INFO  19:07:54,478 - Detected global array declaration niz in line 9
+INFO  19:07:54,478 - Detected global array declaration niz2 in line 9
+INFO  19:07:54,478 - Detected global variable declaration a in line 9
+INFO  19:07:54,479 - Detected global variable declaration b in line 9
+INFO  19:07:54,479 - Detected global array declaration nizch in line 10
+INFO  19:07:54,479 - Detected method main in line 13
+INFO  19:07:54,479 - Detected local variable declaration bodovi in line 14
+INFO  19:07:54,479 - Detected local variable declaration bt in line 15
+INFO  19:07:54,479 - Print calls = 0
+INFO  19:07:54,480 - Generating bytecode file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.obj
+INFO  19:07:54,483 - Parsiranje uspesno zavrseno!

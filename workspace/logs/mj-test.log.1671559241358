@@ -1,0 +1,64 @@
+INFO  19:00:19,366 - Compiling source file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.mj
+INFO  19:00:19,487 - #2 program
+INFO  19:00:19,487 - #50 test301
+INFO  19:00:19,487 - #7 const
+INFO  19:00:19,489 - #50 int
+INFO  19:00:19,489 - #50 nula
+INFO  19:00:19,490 - #8 =
+INFO  19:00:19,490 - #48 0
+INFO  19:00:19,490 - #17 ;
+INFO  19:00:19,493 - #7 const
+INFO  19:00:19,494 - #50 int
+INFO  19:00:19,494 - #50 jedan
+INFO  19:00:19,494 - #8 =
+INFO  19:00:19,494 - #48 1
+INFO  19:00:19,494 - #17 ;
+INFO  19:00:19,494 - #7 const
+INFO  19:00:19,495 - #50 int
+INFO  19:00:19,495 - #50 pet
+INFO  19:00:19,495 - #8 =
+INFO  19:00:19,495 - #48 5
+INFO  19:00:19,495 - #17 ;
+INFO  19:00:19,497 - #50 int
+INFO  19:00:19,497 - #50 niz
+INFO  19:00:19,497 - #13 [
+INFO  19:00:19,497 - #14 ]
+INFO  19:00:19,497 - #20 ,
+INFO  19:00:19,497 - #50 niz2
+INFO  19:00:19,497 - #13 [
+INFO  19:00:19,498 - #14 ]
+INFO  19:00:19,498 - #20 ,
+INFO  19:00:19,498 - #50 a
+INFO  19:00:19,498 - #20 ,
+INFO  19:00:19,498 - #50 b
+INFO  19:00:19,498 - #17 ;
+INFO  19:00:19,498 - #50 char
+INFO  19:00:19,499 - #50 nizch
+INFO  19:00:19,499 - #13 [
+INFO  19:00:19,499 - #14 ]
+INFO  19:00:19,499 - #17 ;
+INFO  19:00:19,499 - #11 {
+INFO  19:00:19,499 - #4 void
+INFO  19:00:19,500 - #50 main
+INFO  19:00:19,501 - #15 (
+INFO  19:00:19,502 - #16 )
+INFO  19:00:19,503 - #50 int
+INFO  19:00:19,503 - #50 bodovi
+INFO  19:00:19,504 - #17 ;
+INFO  19:00:19,504 - #50 bool
+INFO  19:00:19,504 - #50 bt
+INFO  19:00:19,504 - #17 ;
+INFO  19:00:19,504 - #11 {
+INFO  19:00:19,507 - #12 }
+INFO  19:00:19,508 - #12 }
+INFO  19:00:19,519 - Detected global array declaration niz in line 9
+INFO  19:00:19,520 - Detected global array declaration niz2 in line 9
+INFO  19:00:19,520 - Detected global variable declaration a in line 9
+INFO  19:00:19,520 - Detected global variable declaration b in line 9
+INFO  19:00:19,520 - Detected global array declaration nizch in line 10
+INFO  19:00:19,520 - Detected method main in line 13
+INFO  19:00:19,520 - Detected local variable declaration bodovi in line 14
+INFO  19:00:19,520 - Detected local variable declaration bt in line 15
+INFO  19:00:19,520 - Print calls = 0
+INFO  19:00:19,521 - Generating bytecode file: C:\Users\jasna\OneDrive\Desktop\PP-22-23\MJCompiler-repo\workspace\MJCompiler\test\program.obj
+INFO  19:00:19,525 - Parsiranje uspesno zavrseno!

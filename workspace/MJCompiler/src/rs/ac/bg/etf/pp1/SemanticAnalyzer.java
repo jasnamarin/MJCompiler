@@ -2,6 +2,7 @@ package rs.ac.bg.etf.pp1;
 
 import org.apache.log4j.Logger;
 import rs.ac.bg.etf.pp1.ast.*;
+import rs.etf.pp1.mj.runtime.Code;
 import rs.etf.pp1.symboltable.*;
 import rs.etf.pp1.symboltable.concepts.*;
 
@@ -22,7 +23,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 
 	private Obj currentMethod = Tab.noObj;
-	private int currentMethodFormParCnt = 0;
+	private int currentMethodFormParCnt = 0; // Za poredjenje sa stvarnim parametrima.
 	private Struct declaredType = Tab.noType; // Za proveru tipa kod const, var, return-a.
 	private List<Struct> actualParametersList = new ArrayList<>();
 	private int withinLoop = 0;
@@ -44,7 +45,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	public int localVarCount() {
 		return localVarCount;
 	}
-	private int globalFunctionCallCount = 0; // Poziv funkcije je u gramatici Designator LPAREN ActPars RPAREN.
+	private int globalFunctionCallCount = 0; // Poziv funkcije je u gramatici Designator LPAREN ActPars RPAREN (na vise mesta).
 	public int globalFunctionCallCount() {
 		return globalFunctionCallCount;
 	}
@@ -64,7 +65,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		StringBuilder msg = new StringBuilder(message);
 		int line = (info == null) ? 0: info.getLine();
 		if (line != 0)
-			msg.append (" Linija: ").append(line);
+			msg.append (", u liniji ").append(line);
 		log.error(msg.toString());
 		semanticErrors.add(new MJCompilerError(line, CompilerErrorType.SEMANTIC_ERR, message));
 	}
@@ -73,9 +74,25 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		StringBuilder msg = new StringBuilder(message);
 		int line = (info == null) ? 0: info.getLine();
 		if (line != 0)
-			msg.append (" Linija: ").append(line);
+			msg.append (", u liniji ").append(line);
 		log.info(msg.toString());
 	}
+
+	public void report_info(String s, SyntaxNode syntaxNode, Obj obj) {
+		report_info(s, syntaxNode);
+
+		StringBuilder stringBuilder = new StringBuilder("Obj kind: ");
+		stringBuilder.append(OBJ_KINDS[obj.getKind()]);
+		stringBuilder.append(", type: ");
+		stringBuilder.append(TYPES[obj.getType().getKind()]);
+		stringBuilder.append( ", address: ");
+		stringBuilder.append( obj.getAdr());
+		stringBuilder.append(", level: ");
+		stringBuilder.append(obj.getLevel());
+		System.out.println(stringBuilder);
+	}
+	private static String[] OBJ_KINDS = {"Con", "Var", "Type", "Meth", "Fld", "Elem", "Prog"};
+	private static String[] TYPES = {"None", "Int", "Char", "Array", "Class", "Bool"};
 
 	public boolean passed() {
 		return !errorDetected;
@@ -85,21 +102,32 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 
 	public void visit(ProgName progName) {
 		progName.obj = Tab.insert(Obj.Prog, progName.getProgramName(), Tab.noType);
-		Tab.insert(Obj.Type, "bool", boolType); // TODO: test bool type.
+		Tab.insert(Obj.Type, "bool", boolType);
 		Tab.openScope();
 	}
 
 	public void visit(Program program) {
 		/* Obilazi se na samom kraju, nakon sto je detektovano sve unutar programa.
 		* */
-		nVars = Tab.currentScope.getnVars(); // == Code.dataSize
+		Code.dataSize = nVars = Tab.currentScope.getnVars();
 
 		Tab.chainLocalSymbols(program.getProgName().obj); // Sve objekte iz scope-a uvezuje kao locals program-a.
-		Tab.closeScope();
 
 		Obj tmpObj = Tab.find("main");
-		if(tmpObj.getKind() != Obj.Meth)
-			report_error("Greska - main funkija nije pronadjena!", null );
+		if(tmpObj == Tab.noObj || tmpObj.getKind() != Obj.Meth) {
+			report_error("Greska - main funkcija nije pronadjena!", null);
+			return;
+		}
+		if(!tmpObj.getType().equals(Tab.noType)) {
+			report_error("Greska - main mora da bude deklarisan kao void!", null);
+			return;
+		}
+		if(tmpObj.getLevel() != 0) {
+			report_error("Greska - main ne sme da sadrzi formalne parametre!", null);
+			return;
+		}
+
+		Tab.closeScope();
 	}
 
 //----------------------------------------constant--------------------------------------------------
@@ -146,7 +174,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		constObj.setAdr(value);
 
 		symbolicConstCount++;
-		report_info("Detektovana deklaracija konstante " + identifier + " sa vrednoscu " + constVal, symbolicConst);
+		report_info("Detektovana deklaracija konstante " + identifier + " sa vrednoscu " + value, symbolicConst, constObj);
 	}
 
 //---------------------------------------variable---------------------------------------------------
@@ -161,11 +189,11 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		Obj varObj = Tab.insert(Obj.Var, identifier, declaredType);
 		if(varObj.getLevel() == 0) {
 			globalVarCount++;
-			report_info("Detektovana deklaracija globalne promenljive " + identifier, var);
+			report_info("Detektovana deklaracija globalne promenljive " + identifier, var, varObj);
 		}
 		else {
 			localVarCount++;
-			report_info("Detektovana deklaracija lokalne promenljive " + identifier, var);
+			report_info("Detektovana deklaracija lokalne promenljive " + identifier, var, varObj);
 		}
 	}
 
@@ -179,11 +207,11 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		Obj varObj = Tab.insert(Obj.Var, identifier, new Struct(Struct.Array, declaredType));
 		if(varObj.getLevel() == 0) {
 			globalVarCount++;
-			report_info("Detektovana globalna deklaracija niza " + identifier, var);
+			report_info("Detektovana globalna deklaracija niza " + identifier, var, varObj);
 		}
 		else {
 			localVarCount++;
-			report_info("Detektovana lokalna deklaracija niza " + identifier, var);
+			report_info("Detektovana lokalna deklaracija niza " + identifier, var, varObj);
 		}
 	}
 
@@ -204,7 +232,16 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		Tab.openScope();
 	}
 
-	public void visit(MethodDecl methodDecl) {
+	public void visit(MethodDeclPars methodDecl) {
+		if(currentMethod != Tab.noObj) {
+			Tab.chainLocalSymbols(currentMethod);
+		}
+		Tab.closeScope();
+
+		currentMethod = Tab.noObj;
+	}
+
+	public void visit(MethodDeclNoPars methodDecl) {
 		if(currentMethod != Tab.noObj) {
 			Tab.chainLocalSymbols(currentMethod);
 		}
@@ -334,7 +371,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 
 			globalFunctionCallCount++;
 			report_info("Detektovan poziv globalne funkcije programa " + designator.obj.getName(),
-					designatorStatement);
+					designatorStatement, designator.obj);
 		}
 	}
 
@@ -342,7 +379,6 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		DesigList left = designatorAssignment.getDesigList();
 		Designator right = designatorAssignment.getDesignator();
 		Struct desigType = right.obj.getType();
-		int desigCount = 0;
 
 		if (right.obj.getType().getKind() != Struct.Array) {
 			report_error("Greska - desna strana znaka dodele mora da bude niz!", designatorAssignment);
@@ -369,7 +405,6 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 							+"pri dodeli sa svim promenljivim sa leve strane znaka dodele!", designatorAssignment);
 					return;
 				}
-				desigCount++;
 
 				if (left instanceof SingleDesig) left = null;
 				else left = ((DesigListLong) left).getDesigList();
@@ -467,7 +502,6 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		}
 		if(currentMethod == Tab.noObj) {
 			report_error("Greska - return statement ne sme da se nadje izvan globalne funkcije!", statement);
-			//todo - test.
 		}
 	}
 
@@ -577,7 +611,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 
 		globalFunctionCallCount++;
 		report_info("Detektovan poziv globalne funkcije programa " + desigObj.getName(),
-				methodCall);
+				methodCall, desigObj);
 	}
 
 	public void visit(FactorDesignatorParams methodCall) {
@@ -601,11 +635,11 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		}
 		actualParametersList.clear();
 
-		methodCall.struct = methodCall.getDesignator().obj.getType();
+		methodCall.struct = desigObj.getType();
 
 		globalFunctionCallCount++;
 		report_info("Detektovan poziv globalne funkcije programa " + desigObj.getName(),
-				methodCall);
+				methodCall, desigObj);
 	}
 
 	public void visit(FactorNewTypeExpr factor) {
@@ -658,9 +692,4 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		term.struct = term.getFactor().struct;
 	}
 
-//TODO: add context conditions for chr, ord, len.
-//every ident declared before first use?
-	// sve uvezano (struct, obj)?
-
-} // TODO: check if IDENT should keep track of var count instead of VarDecl,.. zbog int a, b, c; npr.
-// testiraj bar count svega i popravi ono sto pada parsiranje B level testa.
+}
